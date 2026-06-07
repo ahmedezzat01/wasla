@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#420691" />
+  <meta name="description" content="Wasla — your smart subscription hub. Track, manage and save on every digital and physical subscription. Arabic-first, accessible, WCAG 2.1 AA/AAA verified." />
+  <meta name="keywords" content="Wasla, وصلة, subscription manager, Saudi Arabia, Arabic, Flutter, Firebase, WCAG, HCI" />
+  <title>Wasla — Smart Subscription Hub | وصلة</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23420691'/><path d='M11 11l10 10M21 11L11 21' stroke='%23ffffff' stroke-width='3' stroke-linecap='round'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============== Top Navigation ============== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><span class="material-icons-outlined">link</span></span>
+        <span class="brand-text">
+          <span class="en">WASLA</span>
+          <span class="ar" style="font-family: var(--font-ar); font-size: 12px; color: var(--wasla-text-muted); font-weight: 600; margin-top: 2px;">وصلة</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#benchmark">Compare</a>
+        <a href="presentation.html">Presentation</a>
+        <a href="docs.html">Docs</a>
+      </div>
+      <div class="nav-cta">
+        <div class="lang-switch" role="tablist" aria-label="Language">
+          <button class="active" data-dir="ltr">EN</button>
+          <button data-dir="rtl">عربي</button>
+        </div>
+        <a class="btn btn-magnetic" href="#screens">
+          <span class="material-icons-outlined">rocket_launch</span>
+          Explore
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============== Hero ============== -->
+  <header class="hero">
+    <div class="hero-gradient"></div>
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="bg-orb o1"></div>
+    <div class="bg-orb o2"></div>
+    <div class="bg-orb o3"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy reveal fade-right" data-parallax="0.04">
+          <div class="section-eyebrow"><span class="dot"></span>Human–Computer Interaction · Senior Project</div>
+          <h1>
+            Wasla
+            <span class="accent">Your Smart<br/>Subscription Hub.</span>
+          </h1>
+          <div class="hero-tagline">مركز اشتراكاتك الذكي — تتبع، أدر، ووفر</div>
+          <p class="hero-lead">
+            A bilingual (Arabic-first, RTL) mobile app that centralises every digital and physical
+            subscription, sends timely renewal reminders, and helps you make informed financial
+            decisions — designed and validated with 221 survey participants and 5 think-aloud testers.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-glow btn-magnetic" href="#screens">
+              <span class="material-icons-outlined">play_circle</span>
+              See the app
+            </a>
+            <a class="btn btn-ghost btn-magnetic" href="presentation.html">
+              <span class="material-icons-outlined">slideshow</span>
+              View presentation
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span class="chip"><i class="material-icons-outlined">verified</i> WCAG 2.1 AA/AAA</span>
+            <span class="chip"><i class="material-icons-outlined">translate</i> Arabic + English</span>
+            <span class="chip"><i class="material-icons-outlined">dark_mode</i> Dark &amp; Light</span>
+            <span class="chip"><i class="material-icons-outlined">phone_iphone</i> Flutter · iOS + Android</span>
+          </div>
+        </div>
+
+        <div class="hero-copy phone-3d-container reveal fade-left" data-parallax="0.08">
+          <div class="mini-phone mini-phone-1">
+            <img src="assets/screens/11-offers.jpeg" alt="Smart offers card" loading="lazy" />
+          </div>
+          <div class="mini-phone mini-phone-2">
+            <img src="assets/screens/07-cancellation.jpeg" alt="Cancellation guide" loading="lazy" />
+          </div>
+          <div class="phone-3d" data-parallax="0.02">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="assets/screens/03-home.jpeg" alt="Wasla home screen" />
+            </div>
+          </div>
+          <div class="phone-shadow"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== Stats strip ============== -->
+  <section style="padding: 0 0 80px; position: relative; z-index: 3;">
+    <div class="container">
+      <div class="stats-strip reveal fade-up">
+        <div class="stat-item">
+          <span class="stat-value"><span data-target="221" data-duration="2000">0</span>+</span>
+          <span class="stat-label">Survey Participants</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value"><span data-target="96.9" data-decimals="1" data-duration="2200">0</span>%</span>
+          <span class="stat-label">Want Renewal Reminders</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value"><span data-target="50.7" data-decimals="1" data-duration="2200">0</span>%</span>
+          <span class="stat-label">Hit by Unexpected Charges</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value"><span data-target="19.41" data-decimals="2" data-duration="2400">0</span>:1</span>
+          <span class="stat-label">WCAG Contrast Ratio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Problem ============== -->
+  <section id="problem">
+    <div class="bg-mesh"></div>
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>The Problem · المشكلة</div>
+        <h2 class="section-title">Subscriptions quietly drain your budget.</h2>
+        <p class="section-subtitle">
+          We surveyed 221 young adults and professionals in Saudi Arabia. The results
+          revealed a clear, painful pattern — users lose control of their subscriptions
+          long before they notice.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <div class="problem-card reveal fade-up">
+          <div class="problem-icon"><span class="material-icons-outlined">bolt</span></div>
+          <div class="problem-pct"><span data-target="50.7" data-decimals="1">0</span>%</div>
+          <h4 class="problem-title">Unexpected charges</h4>
+          <p class="problem-desc">Forgotten subscriptions silently renew and surprise users with bills they didn't anticipate.</p>
+        </div>
+        <div class="problem-card reveal fade-up" style="transition-delay: 0.1s;">
+          <div class="problem-icon"><span class="material-icons-outlined">notifications_off</span></div>
+          <div class="problem-pct"><span data-target="96.9" data-decimals="1">0</span>%</div>
+          <h4 class="problem-title">No renewal reminders</h4>
+          <p class="problem-desc">Almost every user wants timely renewal alerts — but no existing tool provides them out of the box.</p>
+        </div>
+        <div class="problem-card reveal fade-up" style="transition-delay: 0.2s;">
+          <div class="problem-icon"><span class="material-icons-outlined">visibility_off</span></div>
+          <div class="problem-pct"><span data-target="48" data-decimals="0">0</span>%</div>
+          <h4 class="problem-title">Unaware of top costs</h4>
+          <p class="problem-desc">Nearly half of users can't tell which single subscription costs them the most each month.</p>
+        </div>
+        <div class="problem-card reveal fade-up" style="transition-delay: 0.3s;">
+          <div class="problem-icon"><span class="material-icons-outlined">view_module</span></div>
+          <div class="problem-pct">AR/EN</div>
+          <h4 class="problem-title">Fragmented &amp; not Arabic</h4>
+          <p class="problem-desc">Existing tools juggle multiple platforms with no unified view — and almost none support Arabic RTL.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Solution ============== -->
+  <section id="solution" class="solution">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>The Solution · الحل</div>
+        <h2 class="section-title">One hub for every subscription.</h2>
+        <p class="section-subtitle">
+          Wasla centralises your digital and physical memberships, sends smart reminders
+          before charges hit, and answers your questions through an Arabic-first AI assistant.
+        </p>
+      </div>
+
+      <div class="orbit-wrap">
+        <div class="orbit-hub" data-parallax="0.03">
+          <svg class="orbit-svg" viewBox="0 0 540 540" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="orbit-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#502c96" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#0C3571" stop-opacity="0.5"/>
+              </linearGradient>
+            </defs>
+            <circle cx="270" cy="270" r="200" fill="none" stroke="url(#orbit-grad)" stroke-width="1" stroke-dasharray="4 6" opacity="0.6"/>
+            <circle cx="270" cy="270" r="140" fill="none" stroke="url(#orbit-grad)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+            <line x1="270" y1="270" x2="270" y2="70"  stroke="#502c96" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+            <line x1="270" y1="270" x2="470" y2="270" stroke="#502c96" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+            <line x1="270" y1="270" x2="270" y2="470" stroke="#502c96" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+            <line x1="270" y1="270" x2="70"  y2="270" stroke="#502c96" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+          </svg>
+
+          <div class="orbit-center pulse-ring">
+            <div>
+              <div class="ar">وصلة</div>
+              <div class="en">WASLA</div>
+            </div>
+          </div>
+
+          <div class="orbit-node n1 float-3d">
+            <div>
+              <div class="icon material-icons-outlined">notifications_active</div>
+              <div class="ar">التنبيهات</div>
+            </div>
+          </div>
+          <div class="orbit-node n2 float-3d delay-1">
+            <div>
+              <div class="icon material-icons-outlined">smart_toy</div>
+              <div class="ar">المساعد الذكي</div>
+            </div>
+          </div>
+          <div class="orbit-node n3 float-3d delay-2">
+            <div>
+              <div class="icon material-icons-outlined">insights</div>
+              <div class="ar">لوحة التحكم</div>
+            </div>
+          </div>
+          <div class="orbit-node n4 float-3d delay-3">
+            <div>
+              <div class="icon material-icons-outlined">add_box</div>
+              <div class="ar">إدارة الاشتراكات</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="solution-side">
+        <div class="mini-card reveal fade-up">
+          <div class="ic material-icons-outlined">verified_user</div>
+          <div>
+            <h4>Deterministic, not generative AI</h4>
+            <p>The chatbot uses curated Arabic responses — no hallucination, full predictability.</p>
+          </div>
+        </div>
+        <div class="mini-card reveal fade-up" style="transition-delay:0.08s;">
+          <div class="ic material-icons-outlined">track_changes</div>
+          <div>
+            <h4>3 days before — by default</h4>
+            <p>Smart reminders fire automatically before every renewal. Configurable per subscription.</p>
+          </div>
+        </div>
+        <div class="mini-card reveal fade-up" style="transition-delay:0.16s;">
+          <div class="ic material-icons-outlined">find_replace</div>
+          <div>
+            <h4>Step-by-step cancellation</h4>
+            <p>Wasla never hides the exit. Each subscription has a guided cancel flow — anti-dark-pattern.</p>
+          </div>
+        </div>
+        <div class="mini-card reveal fade-up" style="transition-delay:0.24s;">
+          <div class="ic material-icons-outlined">group</div>
+          <div>
+            <h4>Built for the Saudi / GCC market</h4>
+            <p>Arabic-first, RTL native, multi-channel support (WhatsApp, Email, Phone) — local by design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Features ============== -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>8 Key Features · الميزات</div>
+        <h2 class="section-title">Everything you need to control your subscriptions.</h2>
+        <p class="section-subtitle">
+          A focused feature set — every screen earns its place, every flow is built around
+          clarity, accessibility, and the Saudi user.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card card-3d reveal fade-up">
+          <div class="feature-icon material-icons-outlined">lock</div>
+          <h3>Authentication</h3>
+          <div class="ar-name">تسجيل الدخول</div>
+          <p>Secure login and registration with email / password, Google and Apple sign-in.</p>
+        </div>
+        <div class="feature-card card-3d feature-blue reveal fade-up" style="transition-delay:.05s;">
+          <div class="feature-icon material-icons-outlined">add_circle</div>
+          <h3>Add Subscription</h3>
+          <div class="ar-name">إضافة اشتراك</div>
+          <p>Add subscriptions manually with category, price, billing cycle, dates and reminder settings.</p>
+        </div>
+        <div class="feature-card card-3d feature-green reveal fade-up" style="transition-delay:.1s;">
+          <div class="feature-icon material-icons-outlined">edit_note</div>
+          <h3>Edit &amp; Delete</h3>
+          <div class="ar-name">تعديل / حذف</div>
+          <p>Update or remove subscriptions anytime with full control and confirmation dialogs.</p>
+        </div>
+        <div class="feature-card card-3d feature-gold reveal fade-up" style="transition-delay:.15s;">
+          <div class="feature-icon material-icons-outlined">bar_chart</div>
+          <h3>Dashboard Analytics</h3>
+          <div class="ar-name">لوحة التحكم</div>
+          <p>Visual spending insights — monthly, yearly, average, count, with a live spending chart.</p>
+        </div>
+        <div class="feature-card card-3d feature-orange reveal fade-up" style="transition-delay:.2s;">
+          <div class="feature-icon material-icons-outlined">card_giftcard</div>
+          <h3>Smart Offers</h3>
+          <div class="ar-name">العروض الذكية</div>
+          <p>Personalised deals (Netflix 15% off, Fitness 10% off annual) — value without dark patterns.</p>
+        </div>
+        <div class="feature-card card-3d reveal fade-up" style="transition-delay:.25s;">
+          <div class="feature-icon material-icons-outlined">notifications</div>
+          <h3>Notifications</h3>
+          <div class="ar-name">التنبيهات</div>
+          <p>Timely renewal and spending alerts before charges hit — fully customisable per subscription.</p>
+        </div>
+        <div class="feature-card card-3d feature-blue reveal fade-up" style="transition-delay:.3s;">
+          <div class="feature-icon material-icons-outlined">smart_toy</div>
+          <h3>Smart Chatbot</h3>
+          <div class="ar-name">المساعد الذكي</div>
+          <p>AI-powered guidance in Arabic: how to add, cancel, configure notifications, contact support.</p>
+        </div>
+        <div class="feature-card card-3d feature-green reveal fade-up" style="transition-delay:.35s;">
+          <div class="feature-icon material-icons-outlined">settings</div>
+          <h3>Settings</h3>
+          <div class="ar-name">الإعدادات</div>
+          <p>Language (AR/EN), dark/light mode, font size (small/medium/large), notifications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Screens showcase ============== -->
+  <section id="screens" class="screens-section">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>12 Real Screens · الشاشات</div>
+        <h2 class="section-title">A walkthrough of the app.</h2>
+        <p class="section-subtitle">Designed in Figma, validated in usability tests, and built in Flutter. Real captures from the running application.</p>
+      </div>
+
+      <div class="carousel-3d" data-autoplay="true" data-delay="4000">
+        <div class="carousel-stage">
+          <div class="carousel-item" data-screen="login">
+            <img src="assets/screens/01-login.jpeg" alt="Login screen" loading="lazy" />
+            <div class="label"><span class="ar">تسجيل الدخول</span><span>01 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="signup">
+            <img src="assets/screens/02-signup.jpeg" alt="Sign up screen" loading="lazy" />
+            <div class="label"><span class="ar">إنشاء حساب</span><span>02 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="home">
+            <img src="assets/screens/03-home.jpeg" alt="Home screen" loading="lazy" />
+            <div class="label"><span class="ar">الرئيسية</span><span>03 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="dashboard">
+            <img src="assets/screens/04-dashboard.jpeg" alt="Dashboard" loading="lazy" />
+            <div class="label"><span class="ar">لوحة التحكم</span><span>04 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="add">
+            <img src="assets/screens/05-add-subscription.jpeg" alt="Add subscription" loading="lazy" />
+            <div class="label"><span class="ar">إضافة اشتراك</span><span>05 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="details">
+            <img src="assets/screens/06-details.jpeg" alt="Subscription details" loading="lazy" />
+            <div class="label"><span class="ar">معلومات الاشتراك</span><span>06 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="cancel">
+            <img src="assets/screens/07-cancellation.jpeg" alt="Cancellation guide" loading="lazy" />
+            <div class="label"><span class="ar">تعليمات الإلغاء</span><span>07 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="chatbot">
+            <img src="assets/screens/08-chatbot.jpeg" alt="AI chatbot" loading="lazy" />
+            <div class="label"><span class="ar">المساعد الذكي</span><span>08 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="profile">
+            <img src="assets/screens/09-profile.jpeg" alt="Profile and settings" loading="lazy" />
+            <div class="label"><span class="ar">الملف الشخصي</span><span>09 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="offers">
+            <img src="assets/screens/11-offers.jpeg" alt="Smart offers" loading="lazy" />
+            <div class="label"><span class="ar">العروض الذكية</span><span>10 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="accessibility">
+            <img src="assets/screens/12-accessibility.jpeg" alt="Accessibility verification" loading="lazy" />
+            <div class="label"><span class="ar">إمكانية الوصول</span><span>11 / 12</span></div>
+          </div>
+          <div class="carousel-item" data-screen="home-en">
+            <img src="assets/screens/03b-home-en.jpeg" alt="English home (LTR)" loading="lazy" />
+            <div class="label"><span>English (LTR)</span><span>12 / 12</span></div>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button data-carousel-prev aria-label="Previous screen"><span class="material-icons-outlined">chevron_left</span></button>
+          <button data-carousel-next aria-label="Next screen"><span class="material-icons-outlined">chevron_right</span></button>
+        </div>
+
+        <div class="carousel-dots">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Benchmark ============== -->
+  <section id="benchmark">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>Competitive Analysis · المقارنة</div>
+        <h2 class="section-title">How Wasla compares to existing apps.</h2>
+        <p class="section-subtitle">A benchmark against BillBot, Subby and Bobby — Wasla closes every meaningful gap.</p>
+      </div>
+
+      <div class="compare reveal fade-up">
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left;">Feature</th>
+              <th>BillBot</th>
+              <th>Subby</th>
+              <th>Bobby</th>
+              <th class="wasla-col">Wasla</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Arabic Language Support</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>Smart Offers</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>Cancellation Guidance</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="partial">PARTIAL</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>Spending Analytics</td><td><span class="partial">PARTIAL</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>Personalized Settings</td><td><span class="cross">✗</span></td><td><span class="partial">PARTIAL</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>AI Chatbot Assistant</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>Dark / Light Mode</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>Font Size Customization</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>Contact Support (Multi-channel)</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+            <tr><td>RTL Interface</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td class="wasla-col"><span class="check">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== User flow ============== -->
+  <section style="background: linear-gradient(180deg, #f6f3fc 0%, #ffffff 100%);">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>User Flow · رحلة المستخدم</div>
+        <h2 class="section-title">From sign-up to saved money, in 5 steps.</h2>
+      </div>
+
+      <div class="flow">
+        <div class="flow-step reveal fade-up">
+          <div class="num">1</div>
+          <div class="ic material-icons-outlined">login</div>
+          <h4>Register / Login</h4>
+          <div class="ar">تسجيل الدخول</div>
+          <p>Email + password, Google or Apple sign-in.</p>
+        </div>
+        <div class="flow-step reveal fade-up" style="transition-delay:.08s;">
+          <div class="num">2</div>
+          <div class="ic material-icons-outlined">add_box</div>
+          <h4>Add Subscription</h4>
+          <div class="ar">إضافة اشتراك</div>
+          <p>Category, price, dates, reminder settings.</p>
+        </div>
+        <div class="flow-step reveal fade-up" style="transition-delay:.16s;">
+          <div class="num">3</div>
+          <div class="ic material-icons-outlined">insights</div>
+          <h4>View Dashboard</h4>
+          <div class="ar">لوحة التحكم</div>
+          <p>Monthly/yearly spending with toggle + chart.</p>
+        </div>
+        <div class="flow-step reveal fade-up" style="transition-delay:.24s;">
+          <div class="num">4</div>
+          <div class="ic material-icons-outlined">notifications_active</div>
+          <h4>Get Reminders</h4>
+          <div class="ar">التنبيهات</div>
+          <p>Notified 3 days before each renewal.</p>
+        </div>
+        <div class="flow-step reveal fade-up" style="transition-delay:.32s;">
+          <div class="num">5</div>
+          <div class="ic material-icons-outlined">savings</div>
+          <h4>Manage &amp; Save</h4>
+          <div class="ar">إدارة و توفير</div>
+          <p>Edit, cancel via guide, chatbot support, smart offers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Tech stack ============== -->
+  <section id="tech">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>Tech Stack · التقنيات</div>
+        <h2 class="section-title">A modern, accessible foundation.</h2>
+        <p class="section-subtitle">Cross-platform Flutter client, Firebase backend, deterministic AI, and Material Design 3 components.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card card-3d reveal fade-up">
+          <div class="tech-icon material-icons-outlined">phone_iphone</div>
+          <h4>Flutter / Dart</h4>
+          <p>Cross-platform mobile (iOS + Android) with one codebase.</p>
+        </div>
+        <div class="tech-card card-3d reveal fade-up" style="transition-delay:.05s;">
+          <div class="tech-icon material-icons-outlined">palette</div>
+          <h4>Material Design 3</h4>
+          <p>Design system with custom Wasla brand tokens.</p>
+        </div>
+        <div class="tech-card card-3d reveal fade-up" style="transition-delay:.1s;">
+          <div class="tech-icon material-icons-outlined">whatshot</div>
+          <h4>Firebase</h4>
+          <p>Auth, Firestore, Cloud Functions, Storage, Analytics.</p>
+        </div>
+        <div class="tech-card card-3d reveal fade-up" style="transition-delay:.15s;">
+          <div class="tech-icon material-icons-outlined">campaign</div>
+          <h4>FCM</h4>
+          <p>Firebase Cloud Messaging for renewal alerts.</p>
+        </div>
+        <div class="tech-card card-3d reveal fade-up" style="transition-delay:.2s;">
+          <div class="tech-icon material-icons-outlined">smart_toy</div>
+          <h4>Deterministic AI</h4>
+          <p>Curated Arabic responses — no hallucination risk.</p>
+        </div>
+        <div class="tech-card card-3d reveal fade-up" style="transition-delay:.25s;">
+          <div class="tech-icon material-icons-outlined">design_services</div>
+          <h4>Figma</h4>
+          <p>High-fidelity prototypes + design system source of truth.</p>
+        </div>
+        <div class="tech-card card-3d reveal fade-up" style="transition-delay:.3s;">
+          <div class="tech-icon material-icons-outlined">groups</div>
+          <h4>Provider / BLoC</h4>
+          <p>State management for predictable, testable flows.</p>
+        </div>
+        <div class="tech-card card-3d reveal fade-up" style="transition-delay:.35s;">
+          <div class="tech-icon material-icons-outlined">cloud_done</div>
+          <h4>Cloud Functions</h4>
+          <p>Server-side reminder scheduling and analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Timeline ============== -->
+  <section style="background: linear-gradient(180deg, #ffffff 0%, #f6f3fc 100%);">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>Roadmap · خارطة الطريق</div>
+        <h2 class="section-title">From prototype to a smarter future.</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item left reveal fade-left">
+          <div class="dot"></div>
+          <div class="tl-card">
+            <span class="badge completed">Phase 1 · GP1 — Completed</span>
+            <h4>Core Subscription Management</h4>
+            <p>CRUD for subscriptions, dashboard with spending, basic reminders, login flow. Validated in think-aloud tests with 5 users.</p>
+          </div>
+        </div>
+        <div class="tl-item right reveal fade-right">
+          <div class="dot"></div>
+          <div class="tl-card">
+            <span class="badge completed">Phase 2 · GP2 — Completed</span>
+            <h4>AI Chatbot · Smart Offers · Cancellation Guide</h4>
+            <p>Deterministic Arabic chatbot, smart offers (Netflix 15%, Fitness 10%), step-by-step cancellation flow, reminder editing, improved UI.</p>
+          </div>
+        </div>
+        <div class="tl-item left reveal fade-left">
+          <div class="dot"></div>
+          <div class="tl-card">
+            <span class="badge future">Phase 3 — Future</span>
+            <h4>Bank Integration · Auto-Import</h4>
+            <p>Connect bank and payment platforms to auto-discover subscriptions and detect silent renewals.</p>
+          </div>
+        </div>
+        <div class="tl-item right reveal fade-right">
+          <div class="dot"></div>
+          <div class="tl-card">
+            <span class="badge future">Phase 4 — Future</span>
+            <h4>Advanced AI · Marketplace · Social</h4>
+            <p>Spending predictions, subscription marketplace, family sharing, smarter recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Team ============== -->
+  <section id="team">
+    <div class="container">
+      <div class="section-header reveal fade-up">
+        <div class="section-eyebrow"><span class="dot"></span>Team · الفريق</div>
+        <h2 class="section-title">Built by six, supervised by one.</h2>
+        <p class="section-subtitle">Software Engineering — Human-Computer Interaction track · Umm Al-Qura University · College of Computing.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal fade-up">
+          <div class="team-avatar">GS</div>
+          <h4>Ghadi Shaker Al-Fadhli</h4>
+          <div class="role">Team Lead / Frontend</div>
+          <div class="id">444000760 · ghadi2609@gmail.com</div>
+        </div>
+        <div class="team-card reveal fade-up" style="transition-delay:.05s;">
+          <div class="team-avatar">KO</div>
+          <h4>Kholoud Sultan Al-Otaibi</h4>
+          <div class="role">UI/UX Designer / Researcher</div>
+          <div class="id">444005515</div>
+        </div>
+        <div class="team-card reveal fade-up" style="transition-delay:.1s;">
+          <div class="team-avatar">EA</div>
+          <h4>Elaf Ahmad Almaymani</h4>
+          <div class="role">Backend Developer</div>
+          <div class="id">443008696</div>
+        </div>
+        <div class="team-card reveal fade-up" style="transition-delay:.15s;">
+          <div class="team-avatar">MF</div>
+          <h4>Maryam Zainalabidin Fatani</h4>
+          <div class="role">QA / Testing</div>
+          <div class="id">444006766</div>
+        </div>
+        <div class="team-card reveal fade-up" style="transition-delay:.2s;">
+          <div class="team-avatar">KA</div>
+          <h4>Khadijah Ahmed Azab</h4>
+          <div class="role">Documentation / Content</div>
+          <div class="id">444001406</div>
+        </div>
+        <div class="team-card reveal fade-up" style="transition-delay:.25s;">
+          <div class="team-avatar">ST</div>
+          <h4>Suha Abdulrahman Turkistani</h4>
+          <div class="role">AI / Chatbot Developer</div>
+          <div class="id">444006390</div>
+        </div>
+      </div>
+
+      <p class="pull-quote reveal fade-up" style="margin-top: 60px;">
+        تحت إشراف: د. رييم صالح العشيّخ — Dr. Reem Saleh Alashaikh
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== Final CTA ============== -->
+  <section style="background: linear-gradient(135deg, #420691 0%, #56369c 50%, #0C3571 100%); color: #fff; padding: 100px 0; position: relative; overflow: hidden;">
+    <div class="bg-orb o1" style="background:#dadbf1; opacity:.2;"></div>
+    <div class="bg-orb o3" style="background:#FFB13B; opacity:.25;"></div>
+    <div class="container" style="text-align: center; position: relative; z-index: 1;">
+      <div class="section-eyebrow" style="background: rgba(255,255,255,0.1); color: #fff;">
+        <span class="dot" style="background: #FFB13B; box-shadow: 0 0 12px #FFB13B;"></span>
+        Test the app
+      </div>
+      <h2 class="section-title" style="color:#fff; font-size: clamp(32px, 4.5vw, 54px);">Ready to take control of your subscriptions?</h2>
+      <p class="section-subtitle" style="color: rgba(255,255,255,0.85); max-width: 600px; margin-bottom: 30px;">
+        Try Wasla with the demo account, browse the full presentation, or dive into the
+        technical documentation.
+      </p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+        <a class="btn btn-glow" href="presentation.html" style="background: linear-gradient(135deg, #FFB13B 0%, #E84A2C 100%); box-shadow: 0 14px 30px rgba(255,177,59,0.45);">
+          <span class="material-icons-outlined">slideshow</span> View Presentation
+        </a>
+        <a class="btn btn-ghost" href="docs.html" style="background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.3);">
+          <span class="material-icons-outlined">menu_book</span> Read Documentation
+        </a>
+      </div>
+      <div style="margin-top: 36px; display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; color: rgba(255,255,255,0.85); font-size: 14px;">
+        <span><strong>Demo account:</strong> testuser@gmail.com</span>
+        <span><strong>Password:</strong> 123A321</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="footer">
+    <div class="bg-orb o1" style="opacity:.2;"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff;">
+            <span class="brand-mark"><span class="material-icons-outlined">link</span></span>
+            <span class="brand-text">
+              <span class="en" style="color:#fff;">WASLA</span>
+              <span class="ar" style="font-family: var(--font-ar); color: rgba(255,255,255,0.6);">وصلة</span>
+            </span>
+          </a>
+          <p class="footer-desc">
+            A senior Human-Computer Interaction project from Umm Al-Qura University.
+            Built in Flutter + Firebase, validated with 221 participants and 5 think-aloud testers.
+          </p>
+        </div>
+        <div>
+          <h5>Project</h5>
+          <ul>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screens">Screens</a></li>
+            <li><a href="#benchmark">Comparison</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="presentation.html">Presentation</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="#tech">Tech Stack</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:testuser@gmail.com">testuser@gmail.com</a></li>
+            <li><a href="#team">Supervisor: Dr. Reem Alashaikh</a></li>
+            <li>Umm Al-Qura University</li>
+            <li>College of Computing — SE / HCI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025–2026 Wasla · وصلة. All rights reserved.</span>
+        <span class="uqu">
+          <img src="assets/screens/uqu-logo.png" alt="Umm Al-Qura University" />
+          Umm Al-Qura University
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

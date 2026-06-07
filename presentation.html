@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F9F4FB" />
+  <title>Wasla — Presentation · 17 slides</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%239747FF'/><path d='M11 11l10 10M21 11L11 21' stroke='%23ffffff' stroke-width='3' stroke-linecap='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/presentation.css" />
+</head>
+<body class="present">
+  <!-- Top nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><span class="material-icons-outlined">link</span></span>
+        <span class="brand-text">
+          <span class="en">WASLA</span>
+          <span class="ar" style="font-family: var(--font-ar); font-size: 12px; color: var(--p-text-mute); font-weight: 600; margin-top: 2px;">وصلة</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Hub</a>
+        <a class="active" href="presentation.html">Presentation</a>
+        <a href="docs.html">Docs</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-ghost btn-magnetic" href="index.html" style="background: var(--p-xs-btn); color: var(--p-text); border: 1px solid var(--p-border);">
+          <span class="material-icons-outlined">arrow_back</span> <span class="en">Hub</span><span class="ar" style="display:none">الرئيسية</span>
+        </a>
+        <button class="btn btn-magnetic" data-deck-lang aria-label="Toggle language" style="color: var(--p-text); background: var(--p-xs-btn); border: 1px solid var(--p-border); font-weight: 800; min-width: 56px;">
+          <span class="material-icons-outlined" style="font-size:18px">translate</span>
+          <span data-lang-label>EN</span>
+        </button>
+        <a class="btn btn-magnetic" href="presentation.pdf" target="_blank" style="color: #fff; background: var(--p-primary); border: 0; box-shadow: 0 6px 16px rgba(151,71,255,0.3);">
+          <span class="material-icons-outlined">picture_as_pdf</span> PDF
+        </a>
+        <a class="btn btn-magnetic" href="presentation.pptx" download style="color: #fff; background: linear-gradient(135deg, var(--p-warn) 0%, var(--p-orange) 100%); border: 0; box-shadow: 0 6px 16px rgba(232,74,44,0.3);">
+          <span class="material-icons-outlined">download</span> .pptx
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="deck-progress"><div class="bar"></div></div>
+
+  <!-- =========== DECK =========== -->
+  <div class="deck" id="deck">
+
+    <!-- Slide 1: Title -->
+    <section class="slide active" data-title="Title">
+      <div class="slide-bg soft-mesh"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner" style="text-align:center; align-items:center;">
+        <div class="slide-eyebrow"><span data-en="SENIOR HCI PROJECT · 2025–2026" data-ar="مشروع تخرج HCI · 2025–2026">SENIOR HCI PROJECT · 2025–2026</span></div>
+        <h1 class="slide-title">Wasla<span class="accent">.</span><br/><span data-en="Your Smart Subscription Hub." data-ar="مركز اشتراكاتك الذكي.">Your Smart Subscription Hub.</span></h1>
+        <div class="slide-tagline"><span data-en="Your Smart Subscription Hub — track, manage, and save" data-ar="مركز اشتراكاتك الذكي — تتبع، أدر، ووفر">Your Smart Subscription Hub — track, manage, and save</span></div>
+        <div class="slide-meta">
+          <span><span class="material-icons-outlined">groups</span> <span data-en="Ghadi Al-Fadhli · Kholoud Al-Otaibi · Elaf Almaymani · Maryam Fatani · Khadijah Azab · Suha Turkistani" data-ar="غدي الفاضلي · خلود العتيبي · إيلاف الميماني · مريم فطاني · خديجة عزب · سها تركستاني">Ghadi Al-Fadhli · Kholoud Al-Otaibi · Elaf Almaymani · Maryam Fatani · Khadijah Azab · Suha Turkistani</span></span>
+          <span><span class="material-icons-outlined">location_on</span> <span data-en="Umm Al-Qura University" data-ar="جامعة أم القرى">Umm Al-Qura University</span></span>
+          <span><span class="material-icons-outlined">phone_iphone</span> <span data-en="Flutter · Firebase" data-ar="فلاتر · فايربيز">Flutter · Firebase</span></span>
+          <span><span class="material-icons-outlined">verified</span> WCAG 2.1 AA / AAA</span>
+        </div>
+        <div class="supervisor-strip" style="margin-top:24px; max-width: 900px;">
+          <div>
+            <div class="lbl"><span data-en="SUPERVISOR · المشرف" data-ar="المشرف · SUPERVISOR">SUPERVISOR · المشرف</span></div>
+            <div class="name"><span data-en="Dr. Reem Saleh Alshaikh · د. ريم الشيخ" data-ar="د. ريم الشيخ · Dr. Reem Saleh Alshaikh">Dr. Reem Saleh Alshaikh · د. ريم الشيخ</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 2: Overview (NEW — before Problem) -->
+    <section class="slide next-out" data-title="Overview">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="OVERVIEW · نظرة عامة" data-ar="نظرة عامة · OVERVIEW">OVERVIEW · نظرة عامة</span></div>
+        <h2><span data-en="One hub. " data-ar="مركز واحد. ">One hub. </span> <span class="hl" data-en="Every subscription." data-ar="كل اشتراكاتك.">Every subscription.</span><span data-en=" Zero surprise charges." data-ar=" صفر مفاجآت."> Zero surprise charges.</span></h2>
+        <p class="lead"><span data-en="Wasla is a smart bilingual subscription manager for Saudi Arabia and the GCC — designed to fix the fragmented way people track recurring payments across streaming, software, gym, education, and family services." data-ar="وصلة هو تطبيق ذكي ثنائي اللغة لإدارة الاشتراكات في السعودية والخليج — صُمم لحل مشكلة تشتت إدارة الاشتراكات المتكررة بين البث، البرامج، الجيم، التعليم، والخدمات العائلية.">Wasla is a smart bilingual subscription manager for Saudi Arabia and the GCC — designed to fix the fragmented way people track recurring payments across streaming, software, gym, education, and family services.</span></p>
+        <div class="prob-grid-4" style="grid-template-columns: repeat(4, 1fr); margin-top: 32px;">
+          <div class="prob-card">
+            <div class="ic material-icons-outlined">my_location</div>
+            <h4><span data-en="Problem" data-ar="المشكلة">Problem</span></h4>
+            <p><span data-en="Subscriptions are scattered across emails, apps, and bank statements. Users lose track and pay for what they don't use." data-ar="الاشتراكات مبعثرة بين الإيميلات والتطبيقات وكشوف الحساب. المستخدمون يفقدون المتابعة ويدفعون مقابل ما لا يستخدمون.">Subscriptions are scattered across emails, apps, and bank statements. Users lose track and pay for what they don't use.</span></p>
+          </div>
+          <div class="prob-card">
+            <div class="ic material-icons-outlined">track_changes</div>
+            <h4><span data-en="Goal" data-ar="الهدف">Goal</span></h4>
+            <p><span data-en="Centralise every recurring payment, surface the real monthly / yearly cost, and alert users before each renewal." data-ar="مركزة كل دفعة متكررة، إظهار التكلفة الشهرية والسنوية الحقيقية، وتنبيه المستخدمين قبل كل تجديد.">Centralise every recurring payment, surface the real monthly / yearly cost, and alert users before each renewal.</span></p>
+          </div>
+          <div class="prob-card">
+            <div class="ic material-icons-outlined">build</div>
+            <h4><span data-en="Solution" data-ar="الحل">Solution</span></h4>
+            <p><span data-en="A Flutter + Firebase mobile app with native RTL Arabic, deterministic AI chatbot, and guided cancellation." data-ar="تطبيق فلاتر + فايربيز بواجهة عربية أصلية من اليمين لليسار، مساعد ذكي محدد الإجابات، ودليل إلغاء موجه.">A Flutter + Firebase mobile app with native RTL Arabic, deterministic AI chatbot, and guided cancellation.</span></p>
+          </div>
+          <div class="prob-card">
+            <div class="ic material-icons-outlined">emoji_events</div>
+            <h4><span data-en="Outcome" data-ar="النتيجة">Outcome</span></h4>
+            <p><span data-en="Validated with 221 survey participants and 5 think-aloud users. WCAG AAA contrast. 6–8 weeks to ship." data-ar="تم التحقق مع 221 مشارك في الاستبيان و 5 مستخدمين في اختبار التفكير بصوت عالٍ. تباين WCAG AAA. 6–8 أسابيع للإطلاق.">Validated with 221 survey participants and 5 think-aloud users. WCAG AAA contrast. 6–8 weeks to ship.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Problem -->
+    <section class="slide next-out" data-title="Problem">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o1"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow">01 · <span data-en="PROBLEM" data-ar="المشكلة">PROBLEM</span> · المشكلة</div>
+        <h2><span data-en="Subscriptions are bleeding Saudi wallets — " data-ar="الاشتراكات تنزف محافظ السعوديين — ">Subscriptions are bleeding Saudi wallets — </span> <span class="hl" data-en="silently" data-ar="بصمت">silently</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="Validated with 221 survey participants across Saudi Arabia. 50.7% experienced at least one unexpected charge." data-ar="تم التحقق مع 221 مشارك في الاستبيان في السعودية. 50.7% تعرضوا لرسوم غير متوقعة على الأقل مرة.">Validated with 221 survey participants across Saudi Arabia. 50.7% experienced at least one unexpected charge.</span></p>
+        <div class="prob-grid-4">
+          <div class="prob-card">
+            <div class="pct">96.9%</div>
+            <h4><span data-en="Want renewal reminders" data-ar="يطلبون تذكيرات">Want renewal reminders</span></h4>
+            <p>لم يكن لديهم تطبيق يقدم تذكيرات قبل التجديد.</p>
+          </div>
+          <div class="prob-card">
+            <div class="pct">50.7%</div>
+            <h4><span data-en="Hit by surprise charges" data-ar="تعرضوا لمفاجآت مالية">Hit by surprise charges</span></h4>
+            <p>تعرضوا لرسوم غير متوقعة على الأقل مرة واحدة.</p>
+          </div>
+          <div class="prob-card">
+            <div class="pct">76%</div>
+            <h4><span data-en="Forget active subscriptions" data-ar="ينسون اشتراكات نشطة">Forget active subscriptions</span></h4>
+            <p>ينسون اشتراكات نشطة ويدفعون بدون استخدام.</p>
+          </div>
+          <div class="prob-card">
+            <div class="pct">84%</div>
+            <h4><span data-en="Want Arabic first" data-ar="يطلبون العربية أولاً">Want Arabic first</span></h4>
+            <p><span data-en="يطلبون تطبيقاً عربياً أصيلاً بواجهة RTL." data-ar="يطلبون تطبيقاً عربياً أصيلاً بواجهة من اليمين لليسار.">يطلبون تطبيقاً عربياً أصيلاً بواجهة RTL.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Solution -->
+    <section class="slide next-out" data-title="Solution">
+      <div class="slide-bg soft-purple"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow">02 · <span data-en="SOLUTION" data-ar="الحل">SOLUTION</span> · الحل</div>
+        <h2><span data-en="A 4-pillar ecosystem, " data-ar="منظومة من 4 ركائز، ">A 4-pillar ecosystem, </span> <span class="hl" data-en="designed for the GCC" data-ar="مصممة للخليج">designed for the GCC</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="One hub. Four orbiters. End-to-end control over every subscription in your life — digital, physical, family, or business." data-ar="مركز واحد. أربع ركائز. تحكم شامل في كل اشتراك في حياتك — رقمي، فعلي، عائلي، أو تجاري.">One hub. Four orbiters. End-to-end control over every subscription in your life — digital, physical, family, or business.</span></p>
+        <div class="sol-grid">
+          <div class="sol-bullets">
+            <div class="sol-bullet">
+              <div class="ic material-icons-outlined">track_changes</div>
+              <div><h4><span data-en="TRACK" data-ar="تتبع">TRACK</span> · كل اشتراك في مكان</h4><p><span data-en="Live renewal calendar + customisable reminders per subscription." data-ar="تقويم تجديد مباشر + تذكيرات قابلة للتخصيص لكل اشتراك.">Live renewal calendar + customisable reminders per subscription.</span></p></div>
+            </div>
+            <div class="sol-bullet">
+              <div class="ic material-icons-outlined">insights</div>
+              <div><h4><span data-en="ANALYSE" data-ar="تحليل">ANALYSE</span> · لوحة إنفاق ذكية</h4><p><span data-en="Monthly / yearly spending toggle with category breakdown." data-ar="تبديل بين الإنفاق الشهري والسنوي مع تفصيل الفئات.">Monthly / yearly spending toggle with category breakdown.</span></p></div>
+            </div>
+            <div class="sol-bullet">
+              <div class="ic material-icons-outlined">auto_awesome</div>
+              <div><h4><span data-en="ASSIST" data-ar="مساعدة">ASSIST</span> · مساعد عربي فوري</h4><p><span data-en="Deterministic Arabic chatbot with curated FAQ responses." data-ar="مساعد عربي محدد الإجابات بأسئلة شائعة منتقاة.">Deterministic Arabic chatbot with curated FAQ responses.</span></p></div>
+            </div>
+            <div class="sol-bullet">
+              <div class="ic material-icons-outlined">list_alt</div>
+              <div><h4><span data-en="CANCEL" data-ar="إلغاء">CANCEL</span> · إلغاء ميسر</h4><p><span data-en="Step-by-step cancellation guide for any service provider." data-ar="دليل إلغاء خطوة بخطوة لأي مزود خدمة.">Step-by-step cancellation guide for any service provider.</span></p></div>
+            </div>
+          </div>
+          <div class="sol-hub">
+            <div class="ring"></div>
+            <div class="ring r2"></div>
+            <div class="node n1 material-icons-outlined">track_changes</div>
+            <div class="node n2 material-icons-outlined">insights</div>
+            <div class="node n3 material-icons-outlined">list_alt</div>
+            <div class="node n4 material-icons-outlined">auto_awesome</div>
+            <div class="core">W</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Features -->
+    <section class="slide next-out" data-title="Features">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="03 · FEATURES · المزايا" data-ar="المزايا · 03">03 · FEATURES · المزايا</span></div>
+        <h2><span data-en="Eight capabilities, " data-ar="ثماني قدرات، ">Eight capabilities, </span> <span class="hl" data-en="one super-app" data-ar="تطبيق واحد متكامل">one super-app</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="Each feature is backed by survey data, think-aloud tests, and a clean design system — no fluff, no scope creep." data-ar="كل ميزة مدعومة ببيانات استبيان، اختبارات تفكير بصوت عالٍ، ونظام تصميم نظيف — لا حشو، لا تشتت.">Each feature is backed by survey data, think-aloud tests, and a clean design system — no fluff, no scope creep.</span></p>
+        <div class="feat-grid-4">
+          <div class="feat-card"><div class="ic material-icons-outlined">add_box</div><h4><span data-en="Smart Add" data-ar="إضافة ذكية">Smart Add</span></h4><p>إضافة ذكية · auto-categorise + price intelligence</p></div>
+          <div class="feat-card"><div class="ic material-icons-outlined">insights</div><h4><span data-en="Analytics" data-ar="تحليلات">Analytics</span></h4><p>تحليلات · monthly / yearly spending toggle</p></div>
+          <div class="feat-card"><div class="ic material-icons-outlined">notifications</div><h4><span data-en="Renewal Alerts" data-ar="تنبيهات التجديد">Renewal Alerts</span></h4><p>تنبيهات · 3-day default, customisable per sub</p></div>
+          <div class="feat-card"><div class="ic material-icons-outlined">auto_awesome</div><h4><span data-en="Smart Offers" data-ar="عروض ذكية">Smart Offers</span></h4><p>عروض ذكية · personalised deals on top cats</p></div>
+          <div class="feat-card"><div class="ic material-icons-outlined">list_alt</div><h4><span data-en="Cancel Guide" data-ar="دليل الإلغاء">Cancel Guide</span></h4><p>دليل الإلغاء · step-by-step in-app</p></div>
+          <div class="feat-card"><div class="ic material-icons-outlined">smart_toy</div><h4><span data-en="AI Assistant" data-ar="مساعد ذكي">AI Assistant</span></h4><p>مساعد ذكي · deterministic Arabic chatbot</p></div>
+          <div class="feat-card"><div class="ic material-icons-outlined">favorite</div><h4><span data-en="Favourites" data-ar="المفضلة">Favourites</span></h4><p>المفضلة · pin important subs for quick access</p></div>
+          <div class="feat-card"><div class="ic material-icons-outlined">support_agent</div><h4><span data-en="Multi-Channel" data-ar="دعم متعدد">Multi-Channel</span></h4><p>دعم متعدد · WhatsApp · Email · Phone</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Screens (Dashboard colors match the app) -->
+    <section class="slide next-out" data-title="Screens">
+      <div class="slide-bg soft-purple"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="04 · SCREENS · الشاشات" data-ar="الشاشات · 04">04 · SCREENS · الشاشات</span></div>
+        <h2><span data-en="Eight high-fidelity screens, " data-ar="ثماني شاشات عالية الدقة، ">Eight high-fidelity screens, </span> <span class="hl" data-en="validated in Arabic" data-ar="مُختبرة بالعربية">validated in Arabic</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="Built in Flutter · Material 3 · with native RTL support. Dashboard colors match the design system shipped in the actual app." data-ar="مبني بـ Flutter · Material 3 · بدعم أصلي للعربية. ألوان الداشبورد مطابقة لنظام التصميم في التطبيق.">Built in Flutter · Material 3 · with native RTL support. Dashboard colors match the design system shipped in the actual app.</span></p>
+        <div class="screens-strip">
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/01-login.jpeg" alt="Login" /></div><div class="label">Login · دخول</div></div>
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/02-signup.jpeg" alt="Signup" /></div><div class="label">Signup · تسجيل</div></div>
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/03-home.jpeg" alt="Home" /></div><div class="label">Home · الرئيسية</div></div>
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/04-dashboard.jpeg" alt="Dashboard" /></div><div class="label">Dashboard · الإنفاق</div></div>
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/05-add-subscription.jpeg" alt="Add" /></div><div class="label">Add · إضافة</div></div>
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/06-details.jpeg" alt="Details" /></div><div class="label">Details · التفاصيل</div></div>
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/07-cancellation.jpeg" alt="Cancel" /></div><div class="label">Cancel · إلغاء</div></div>
+          <div class="screen-tile"><div class="frame"><img src="assets/screens/08-chatbot.jpeg" alt="Chatbot" /></div><div class="label">Chatbot · المساعد</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: <span data-en="Architecture" data-ar="المعمارية">Architecture</span> (SPLIT — code | explanation with FULL actors) -->
+    <section class="slide next-out" data-title="Architecture">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="05 · ARCHITECTURE · المعمارية" data-ar="المعمارية · 05">05 · ARCHITECTURE · المعمارية</span></div>
+        <h2><span data-en="Clean Dart + Firebase. " data-ar="Dart نظيف + Firebase. ">Clean Dart + Firebase. </span> <span class="hl" data-en="Three actors" data-ar="ثلاثة فاعلين">Three actors</span><span data-en=", one model." data-ar="، نموذج واحد.">, one model.</span></h2>
+        <p class="lead">The Subscription model is the heart. The Dashboard widget reads it. The Chatbot service answers questions about it. Real code from <code style="background:var(--p-tint);padding:2px 6px;border-radius:4px;font-size:12px;color:var(--p-primary-d);">lib/models/subscription_model.dart</code> on the left.</p>
+        <div class="arch-split">
+          <!-- LEFT: real code from waslaa/lib/models/subscription_model.dart -->
+          <div class="code-panel">
+            <div class="panel-head">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="file">lib/models/subscription_model.dart</span>
+            </div>
+<pre><span class="c-cm">// Real Subscription model from waslaa app</span>
+<span class="c-kw">import</span> <span class="c-st">'package:cloud_firestore/cloud_firestore.dart'</span>;
+<span class="c-kw">import</span> <span class="c-st">'package:flutter/material.dart'</span>;
+
+<span class="c-kw">class</span> <span class="c-ty">Subscription</span> {
+  <span class="c-kw">final</span> <span class="c-ty">String</span> id;
+  <span class="c-kw">final</span> <span class="c-ty">String</span> userId;
+  <span class="c-kw">final</span> <span class="c-ty">String</span> name;
+  <span class="c-kw">final</span> <span class="c-ty">String</span>? customName;
+  <span class="c-kw">final</span> <span class="c-ty">double</span> price;
+  <span class="c-kw">final</span> <span class="c-ty">DateTime</span> renewalDate;
+  <span class="c-kw">final</span> <span class="c-ty">DateTime</span>? expiryDate;
+  <span class="c-kw">final</span> <span class="c-ty">String</span> iconColor;
+  <span class="c-kw">final</span> <span class="c-ty">String</span>? notes;
+  <span class="c-kw">final</span> <span class="c-ty">String</span>? reminder;
+  <span class="c-kw">final</span> <span class="c-ty">String</span>? contactInfo;
+
+  <span class="c-kw">late</span> <span class="c-ty">Color</span> _cachedColor;
+
+  <span class="c-ty">Subscription</span>({
+    <span class="c-kw">required</span> <span class="c-kw">this</span>.id,
+    <span class="c-kw">required</span> <span class="c-kw">this</span>.userId,
+    <span class="c-kw">required</span> <span class="c-kw">this</span>.name,
+    <span class="c-kw">this</span>.customName,
+    <span class="c-kw">required</span> <span class="c-kw">this</span>.price,
+    <span class="c-kw">required</span> <span class="c-kw">this</span>.renewalDate,
+    <span class="c-kw">this</span>.expiryDate,
+    <span class="c-kw">required</span> <span class="c-kw">this</span>.iconColor,
+    <span class="c-kw">this</span>.notes,
+    <span class="c-kw">this</span>.reminder,
+    <span class="c-kw">this</span>.contactInfo,
+  }) {
+    _cachedColor = <span class="c-ty">Color</span>(<span class="c-ty">int</span>.parse(iconColor));
+  }
+
+  <span class="c-ty">Color</span> <span class="c-kw">get</span> color =&gt; _cachedColor;
+
+  <span class="c-ty">String</span> <span class="c-kw">get</span> displayName {
+    <span class="c-kw">if</span> (name == <span class="c-st">'اشتراك مخصص'</span> &amp;&amp; customName != <span class="c-kw">null</span>) {
+      <span class="c-kw">return</span> customName!;
+    }
+    <span class="c-kw">return</span> name;
+  }
+
+  <span class="c-ty">Map</span>&lt;<span class="c-ty">String</span>, <span class="c-ty">dynamic</span>&gt; toMap() {
+    <span class="c-kw">return</span> {
+      <span class="c-st">'userId'</span>: userId,
+      <span class="c-st">'name'</span>: name,
+      <span class="c-st">'price'</span>: price,
+      <span class="c-st">'renewalDate'</span>: <span class="c-ty">Timestamp</span>.fromDate(renewalDate),
+      <span class="c-st">'iconColor'</span>: iconColor,
+    };
+  }
+}</pre>
+          </div>
+          <!-- RIGHT: explanation + 3 actors (full text, no crop) -->
+          <div class="explain-panel">
+            <div class="panel-title"><span class="num">1</span> <span data-en="Three actors, one model" data-ar="ثلاثة فاعلين، نموذج واحد">Three actors, one model</span></div>
+            <div class="panel-desc"><span data-en="The Subscription model is the single source of truth. Each actor has a focused responsibility around it." data-ar="نموذج الاشتراك هو المرجع الوحيد للحقيقة. لكل فاعل مسؤولية محددة.">The Subscription model is the single source of truth. Each actor has a focused responsibility around it.</span></div>
+            <div class="actors-3">
+              <div class="actor-card user">
+                <div class="head">
+                  <div class="avatar">U</div>
+                  <div>
+                    <h5><span data-en="User Actor" data-ar="المستخدم">User Actor</span></h5>
+                    <div class="role-tag">Primary</div>
+                  </div>
+                </div>
+                <ul>
+                  <li><span data-en="Manage subs (CRUD)" data-ar="إدارة الاشتراكات">Manage subs (CRUD)</span></li>
+                  <li><span data-en="View analytics" data-ar="عرض التحليلات">View analytics</span></li>
+                  <li><span data-en="Receive reminders" data-ar="تلقي التذكيرات">Receive reminders</span></li>
+                  <li><span data-en="Talk to AI assistant" data-ar="التحدث مع المساعد">Talk to AI assistant</span></li>
+                  <li><span data-en="Customise settings" data-ar="تخصيص الإعدادات">Customise settings</span></li>
+                  <li><span data-en="View offers &amp; cancel guides" data-ar="عرض العروض وأدلة الإلغاء">View offers &amp; cancel guides</span></li>
+                  <li><span data-en="Search &amp; contact support" data-ar="البحث والتواصل مع الدعم">Search &amp; contact support</span></li>
+                </ul>
+              </div>
+              <div class="actor-card admin">
+                <div class="head">
+                  <div class="avatar">A</div>
+                  <div>
+                    <h5><span data-en="Admin Actor" data-ar="المشرف">Admin Actor</span></h5>
+                    <div class="role-tag">Operator</div>
+                  </div>
+                </div>
+                <ul>
+                  <li><span data-en="Manage advertisements" data-ar="إدارة الإعلانات">Manage advertisements</span></li>
+                  <li><span data-en="Manage offers" data-ar="إدارة العروض">Manage offers</span></li>
+                  <li><span data-en="Send push notifications" data-ar="إرسال الإشعارات">Send push notifications</span></li>
+                  <li><span data-en="View system analytics" data-ar="عرض تحليلات النظام">View system analytics</span></li>
+                </ul>
+              </div>
+              <div class="actor-card system">
+                <div class="head">
+                  <div class="avatar">S</div>
+                  <div>
+                    <h5><span data-en="System Actor" data-ar="النظام">System Actor</span></h5>
+                    <div class="role-tag">Background</div>
+                  </div>
+                </div>
+                <ul>
+                  <li><span data-en="Monitor renewal dates" data-ar="مراقبة تواريخ التجديد">Monitor renewal dates</span></li>
+                  <li><span data-en="Generate notifications" data-ar="توليد الإشعارات">Generate notifications</span></li>
+                  <li><span data-en="Process spending analytics" data-ar="معالجة تحليلات الإنفاق">Process spending analytics</span></li>
+                  <li><span data-en="Store preferences locally" data-ar="حفظ التفضيلات محلياً">Store preferences locally</span></li>
+                  <li><span data-en="Re-render all screens in new theme" data-ar="إعادة عرض الشاشات بالثيم الجديد">Re-render all screens in new theme</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 8: Research Methodology (NEW) -->
+    <section class="slide next-out" data-title="Research">
+      <div class="slide-bg soft-purple"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="06 · RESEARCH METHODOLOGY · منهجية البحث" data-ar="منهجية البحث · 06">06 · RESEARCH METHODOLOGY · منهجية البحث</span></div>
+        <h2><span data-en="Mixed-methods research, " data-ar="منهج مختلط، ">Mixed-methods research, </span> <span class="hl" data-en="two GPs, 226 participants" data-ar="مشروعا تخرج، 226 مشاركاً">two GPs, 226 participants</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="A multi-stage user-centred design process that informs every design decision in Wasla — from problem framing to final validation." data-ar="عملية تصميم متعددة المراحل تتمحور حول المستخدم، تغذي كل قرار تصميمي في وصلة — من تحديد المشكلة إلى التحقق النهائي.">A multi-stage user-centred design process that informs every design decision in Wasla — from problem framing to final validation.</span></p>
+        <div class="research-grid">
+          <div class="method-list">
+            <div class="method-row">
+              <div class="badge">1</div>
+              <div><h5><span data-en="Literature &amp; Market Review" data-ar="مراجعة الأدبيات والسوق">Literature &amp; Market Review</span></h5><p><span data-en="Analysed 12 popular subscription apps to identify feature gaps in the GCC market." data-ar="تحليل 12 تطبيق اشتراكات شهير لتحديد الفجوات في سوق الخليج.">Analysed 12 popular subscription apps to identify feature gaps in the GCC market.</span></p></div>
+            </div>
+            <div class="method-row">
+              <div class="badge">2</div>
+              <div><h5><span data-en="Quantitative Survey · 221 participants" data-ar="استبيان كمي · 221 مشاركاً">Quantitative Survey · 221 participants</span></h5><p><span data-en="Online questionnaire targeting young adults (18–35) in Saudi Arabia — covered reminders, RTL, cancellation behaviour." data-ar="استبيان إلكتروني يستهدف الشباب (18–35) في السعودية — غطى التذكيرات، دعم العربية، وسلوك الإلغاء.">Online questionnaire targeting young adults (18–35) in Saudi Arabia — covered reminders, RTL, cancellation behaviour.</span></p></div>
+            </div>
+            <div class="method-row">
+              <div class="badge">3</div>
+              <div><h5><span data-en="Qualitative Interviews · 5 users" data-ar="مقابلات نوعية · 5 مستخدمين">Qualitative Interviews · 5 users</span></h5><p><span data-en="Semi-structured interviews to deepen findings from the survey and uncover pain points around renewal tracking." data-ar="مقابلات شبه منظمة لتعميق نتائج الاستبيان وكشف نقاط الألم في تتبع التجديد.">Semi-structured interviews to deepen findings from the survey and uncover pain points around renewal tracking.</span></p></div>
+            </div>
+            <div class="method-row">
+              <div class="badge">4</div>
+              <div><h5><span data-en="Think-Aloud Usability Test · 5 users" data-ar="اختبار التفكير بصوت عالٍ · 5 مستخدمين">Think-Aloud Usability Test · 5 users</span></h5><p><span data-en="Conducted during GP1 and GP2 to validate prototypes and the final system, capturing confusion in real time." data-ar="أُجري في GP1 و GP2 للتحقق من النماذج الأولية والنظام النهائي، مع رصد الارتباك لحظياً.">Conducted during GP1 and GP2 to validate prototypes and the final system, capturing confusion in real time.</span></p></div>
+            </div>
+            <div class="method-row">
+              <div class="badge">5</div>
+              <div><h5><span data-en="Accessibility &amp; Visual Audit" data-ar="تدقيق الوصول البصري">Accessibility &amp; Visual Audit</span></h5><p><span data-en="WCAG 2.1 AA / AAA contrast verified at 19.41:1, 15.42:1, 12.57:1, 11.56:1 across all primary tokens." data-ar="تم التحقق من تباين WCAG 2.1 AA / AAA عند 19.41:1 و 15.42:1 و 12.57:1 و 11.56:1 لكل الألوان الأساسية.">WCAG 2.1 AA / AAA contrast verified at 19.41:1, 15.42:1, 12.57:1, 11.56:1 across all primary tokens.</span></p></div>
+            </div>
+          </div>
+          <div class="research-stats">
+            <div class="stat-tile">
+              <div class="num">221</div>
+              <div class="lbl"><span data-en="Survey participants" data-ar="مشارك في الاستبيان">Survey participants</span></div>
+            </div>
+            <div class="stat-tile success">
+              <div class="num">5</div>
+              <div class="lbl">Think-aloud users (GP1 &amp; GP2)</div>
+            </div>
+            <div class="stat-tile warn">
+              <div class="num">2</div>
+              <div class="lbl"><span data-en="Graded projects (GP1 + GP2)" data-ar="مشاريع التخرج (GP1 + GP2)">Graded projects (GP1 + GP2)</span></div>
+            </div>
+            <div class="stat-tile">
+              <div class="num">12</div>
+              <div class="lbl"><span data-en="Competitor apps benchmarked" data-ar="تطبيقات منافسة تم تحليلها">Competitor apps benchmarked</span></div>
+            </div>
+            <div class="stat-tile success">
+              <div class="num">AAA</div>
+              <div class="lbl">WCAG 2.1 contrast pass</div>
+            </div>
+            <div class="stat-tile error">
+              <div class="num">4</div>
+              <div class="lbl"><span data-en="Phases in the roadmap" data-ar="مراحل في خارطة الطريق">Phases in the roadmap</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: Testing Method (NEW) -->
+    <section class="slide next-out" data-title="Testing Method">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="07 · TESTING METHOD · طريقة الاختبار" data-ar="طريقة الاختبار · 07">07 · TESTING METHOD · طريقة الاختبار</span></div>
+        <h2><span data-en="Think-Aloud usability testing, " data-ar="اختبار التفكير بصوت عالٍ، ">Think-Aloud usability testing, </span> <span class="hl" data-en="twice" data-ar="مرتين">twice</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="A formative usability test with 5 participants during both GP1 and GP2. Participants performed real tasks while verbalising thoughts, confusion, and feedback." data-ar="اختبار استخدام تشكيلي مع 5 مشاركين في GP1 و GP2. نفّذ المشاركون مهام حقيقية مع التعبير اللفظي عن أفكارهم وارتباكهم وملاحظاتهم.">A formative usability test with 5 participants during both GP1 and GP2. Participants performed real tasks while verbalising thoughts, confusion, and feedback.</span></p>
+        <div class="test-method">
+          <div class="test-scenarios">
+            <div class="scenario-card"><div class="num">1</div><div><h5><span data-en="Add a new subscription" data-ar="إضافة اشتراك جديد">Add a new subscription</span></h5><p><span data-en="From launch, through category selection, to saving." data-ar="من الفتح، إلى اختيار الفئة، إلى الحفظ.">From launch, through category selection, to saving.</span></p></div></div>
+            <div class="scenario-card"><div class="num">2</div><div><h5><span data-en="Edit an existing subscription" data-ar="تعديل اشتراك موجود">Edit an existing subscription</span></h5><p><span data-en="Modify reminder settings, price, or notes." data-ar="تعديل إعدادات التذكير أو السعر أو الملاحظات.">Modify reminder settings, price, or notes.</span></p></div></div>
+            <div class="scenario-card"><div class="num">3</div><div><h5><span data-en="Delete a subscription" data-ar="حذف اشتراك">Delete a subscription</span></h5><p><span data-en="Including the confirmation flow and feedback." data-ar="بما في ذلك خطوات التأكيد والملاحظات.">Including the confirmation flow and feedback.</span></p></div></div>
+            <div class="scenario-card"><div class="num">4</div><div><h5><span data-en="Manually add a custom subscription" data-ar="إضافة اشتراك مخصص يدوياً">Manually add a custom subscription</span></h5><p><span data-en="Including contact info and notes fields." data-ar="بما في ذلك معلومات الاتصال والملاحظات.">Including contact info and notes fields.</span></p></div></div>
+            <div class="scenario-card"><div class="num">5</div><div><h5><span data-en="Display the control panel" data-ar="عرض لوحة التحكم">Display the control panel</span></h5><p><span data-en="Open the dashboard and inspect monthly / yearly view." data-ar="فتح الداشبورد وعرض الشهرية / السنوية.">Open the dashboard and inspect monthly / yearly view.</span></p></div></div>
+          </div>
+          <div class="test-meta">
+            <h4><span data-en="Test Setup" data-ar="إعداد الاختبار">Test Setup</span></h4>
+            <ul>
+              <li>Test name: Usability test for Wasla application</li>
+              <li>Test type: Usability Testing, Think-Aloud Protocol</li>
+              <li><span data-en="Sample size: 5 users per round (GP1 + GP2)" data-ar="حجم العينة: 5 مستخدمين في كل جولة (GP1 + GP2)">Sample size: 5 users per round (GP1 + GP2)</span></li>
+              <li>Environment: Mobile (Android), touch-based</li>
+              <li>Prerequisites: Logged in, internet, ≥1 existing sub, notifications enabled</li>
+              <li><span data-en="Data captured: time-on-task, error count, verbal protocol, post-task survey" data-ar="البيانات: وقت المهمة، عدد الأخطاء، البروتوكول اللفظي، استبيان ما بعد المهمة">Data captured: time-on-task, error count, verbal protocol, post-task survey</span></li>
+              <li>Iteration cycle: find issues → fix in GP2 → re-test → ship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 10: Testing Results (NEW) -->
+    <section class="slide next-out" data-title="Testing Results">
+      <div class="slide-bg soft-purple"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="08 · TESTING RESULTS · نتائج الاختبار" data-ar="نتائج الاختبار · 08">08 · TESTING RESULTS · نتائج الاختبار</span></div>
+        <h2><span data-en="GP1 → GP2: " data-ar="GP1 → GP2: ">GP1 → GP2: </span> <span class="hl" data-en="measurable improvement" data-ar="تحسن قابل للقياس">measurable improvement</span><span data-en=" on every aspect." data-ar=" في كل جانب."> on every aspect.</span></h2>
+        <p class="lead"><span data-en="A side-by-side comparison of GP1 (prototype) versus GP2 (final system) across the same six usability aspects." data-ar="مقارنة جنباً إلى جنب بين GP1 (النموذج) و GP2 (النظام النهائي) في ستة جوانب استخدام.">A side-by-side comparison of GP1 (prototype) versus GP2 (final system) across the same six usability aspects.</span></p>
+        <div class="test-results">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 18%;"><span data-en="Aspect" data-ar="الجانب">Aspect</span></th>
+                <th style="width: 26%;"><span data-en="GP1 Prototype" data-ar="GP1 النموذج">GP1 Prototype</span></th>
+                <th style="width: 26%;"><span data-en="GP2 System" data-ar="GP2 النظام">GP2 System</span></th>
+                <th style="width: 18%;"><span data-en="Improvement" data-ar="التحسن">Improvement</span></th>
+                <th style="width: 12%;"><span data-en="Status" data-ar="الحالة">Status</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b><span data-en="Add Subscription" data-ar="إضافة اشتراك">Add Subscription</span></b></td>
+                <td><span data-en="Add button small &amp; unclear, up to 55s to complete." data-ar="زر إضافة صغير وغير واضح، حتى 55 ثانية للإكمال.">Add button small &amp; unclear, up to 55s to complete.</span></td>
+                <td><span data-en="Most users added subs successfully." data-ar="معظم المستخدمين أضافوا اشتراكات بنجاح.">Most users added subs successfully.</span></td>
+                <td><span data-en="Improved button visibility and easier navigation." data-ar="تحسين ظهور الزر وسهولة التنقل.">Improved button visibility and easier navigation.</span></td>
+                <td><span class="pass-tag">Pass</span></td>
+              </tr>
+              <tr>
+                <td><b><span data-en="User Interface" data-ar="واجهة المستخدم">User Interface</span></b></td>
+                <td><span data-en="Small fonts, unclear layout, unnecessary dashboard elements." data-ar="خطوط صغيرة، تخطيط غير واضح، عناصر داشبورد غير ضرورية.">Small fonts, unclear layout, unnecessary dashboard elements.</span></td>
+                <td><span data-en="Dashboard appreciated — clear and organized." data-ar="الداشبورد محبوب — واضح ومنظم.">Dashboard appreciated — clear and organized.</span></td>
+                <td><span data-en="Better UI organization and dashboard presentation." data-ar="تنظيم أفضل للواجهة وعرض الداشبورد.">Better UI organization and dashboard presentation.</span></td>
+                <td><span class="pass-tag">Pass</span></td>
+              </tr>
+              <tr>
+                <td><b><span data-en="Reminder Editing" data-ar="تعديل التذكير">Reminder Editing</span></b></td>
+                <td><span data-en="Feature not available in GP1 testing." data-ar="الميزة غير متوفرة في اختبار GP1.">Feature not available in GP1 testing.</span></td>
+                <td><span data-en="Most users successfully edited reminders." data-ar="معظم المستخدمين عدّلوا التذكيرات بنجاح.">Most users successfully edited reminders.</span></td>
+                <td><span data-en="Added reminder editing with acceptable usability." data-ar="إضافة تعديل التذكير مع قابلية استخدام مقبولة.">Added reminder editing with acceptable usability.</span></td>
+                <td><span class="pass-tag">Pass</span></td>
+              </tr>
+              <tr>
+                <td><b><span data-en="Delete / Cancel" data-ar="حذف / إلغاء">Delete / Cancel</span></b></td>
+                <td><span data-en="Process simple, but no direct unsubscribe links." data-ar="العملية بسيطة، لكن لا توجد روابط إلغاء مباشرة.">Process simple, but no direct unsubscribe links.</span></td>
+                <td><span data-en="Most users deleted subs; some felt confirmations were excessive." data-ar="معظم المستخدمين حذفوا الاشتراكات؛ بعضهم رأى التأكيدات مفرطة.">Most users deleted subs; some felt confirmations were excessive.</span></td>
+                <td><span data-en="Improved deletion flow and user guidance." data-ar="تحسين تدفق الحذف وإرشاد المستخدم.">Improved deletion flow and user guidance.</span></td>
+                <td><span class="pass-tag">Pass</span></td>
+              </tr>
+              <tr>
+                <td><b><span data-en="Subscription Info" data-ar="معلومات الاشتراك">Subscription Info</span></b></td>
+                <td><span data-en="Some users confused about expiry &amp; renewal tracking." data-ar="بعض المستخدمين ارتبكوا حول تتبع الانتهاء والتجديد.">Some users confused about expiry &amp; renewal tracking.</span></td>
+                <td><span data-en="Dashboard clearly shows monthly &amp; yearly expenses." data-ar="الداشبورد يعرض بوضوح المصروفات الشهرية والسنوية.">Dashboard clearly shows monthly &amp; yearly expenses.</span></td>
+                <td><span data-en="Improved clarity of subscription tracking." data-ar="تحسين وضوح تتبع الاشتراك.">Improved clarity of subscription tracking.</span></td>
+                <td><span class="pass-tag">Pass</span></td>
+              </tr>
+              <tr>
+                <td><b><span data-en="Custom Subscription" data-ar="اشتراك مخصص">Custom Subscription</span></b></td>
+                <td><span data-en="Feature not available in GP1 prototype." data-ar="الميزة غير متوفرة في نموذج GP1.">Feature not available in GP1 prototype.</span></td>
+                <td><span data-en="Users could manually add custom subscriptions." data-ar="يمكن للمستخدمين إضافة اشتراكات مخصصة يدوياً.">Users could manually add custom subscriptions.</span></td>
+                <td><span data-en="More flexible subscription management." data-ar="إدارة اشتراكات أكثر مرونة.">More flexible subscription management.</span></td>
+                <td><span class="pass-tag">Pass</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="test-summary">
+          <div class="summary-pill success">
+            <div class="ic material-icons-outlined">check_circle</div>
+            <div><h4><span data-en="All 6 aspects passed" data-ar="كل الجوانب الستة نجحت">All 6 aspects passed</span></h4><p><span data-en="Zero blocking issues, no critical errors." data-ar="لا مشاكل حرجة، لا أخطاء قاتلة.">Zero blocking issues, no critical errors.</span></p></div>
+          </div>
+          <div class="summary-pill warn">
+            <div class="ic material-icons-outlined">tips_and_updates</div>
+            <div><h4><span data-en="Minor follow-ups" data-ar="متابعات بسيطة">Minor follow-ups</span></h4><p><span data-en="Fewer confirmations, clearer custom-sub labels." data-ar="تأكيدات أقل، تسميات أوضح للاشتراك المخصص.">Fewer confirmations, clearer custom-sub labels.</span></p></div>
+          </div>
+          <div class="summary-pill">
+            <div class="ic material-icons-outlined">visibility</div>
+            <div><h4><span data-en="Visual polish" data-ar="تحسين بصري">Visual polish</span></h4><p><span data-en="One user requested a colour &amp; UI refresh — shipped in GP2." data-ar="طلب مستخدم تحديث الألوان والواجهة — تم في GP2.">One user requested a colour &amp; UI refresh — shipped in GP2.</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11: Comparison -->
+    <section class="slide next-out" data-title="Comparison">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="09 · COMPARISON · المقارنة" data-ar="المقارنة · 09">09 · COMPARISON · المقارنة</span></div>
+        <h2><span data-en="Wasla closes " data-ar="وصلة تسد ">Wasla closes </span> <span class="hl" data-en="every meaningful gap" data-ar="كل فجوة ذات معنى">every meaningful gap</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="Benchmarked against the three most popular subscription managers in global app stores." data-ar="مقارنة بأشهر ثلاث تطبيقات لإدارة الاشتراكات في متاجر التطبيقات العالمية.">Benchmarked against the three most popular subscription managers in global app stores.</span></p>
+        <div class="compare-towers">
+          <div class="tower">
+            <h3><span data-en="BillBot · Subby · Bobby" data-ar="بيل بوت · سابي · بوبي">BillBot · Subby · Bobby</span><small><span data-en="Most popular subscription apps" data-ar="أشهر تطبيقات الاشتراكات">Most popular subscription apps</span></small></h3>
+            <div class="row"><span class="label"><span data-en="Arabic language support" data-ar="دعم اللغة العربية">Arabic language support</span></span><span class="x">✗</span></div>
+            <div class="row"><span class="label"><span data-en="Smart personalised offers" data-ar="عروض ذكية مخصصة">Smart personalised offers</span></span><span class="x">✗</span></div>
+            <div class="row"><span class="label"><span data-en="Cancellation guidance" data-ar="إرشاد الإلغاء">Cancellation guidance</span></span><span class="p">PARTIAL</span></div>
+            <div class="row"><span class="label"><span data-en="Spending analytics" data-ar="تحليلات الإنفاق">Spending analytics</span></span><span class="p">PARTIAL</span></div>
+            <div class="row"><span class="label"><span data-en="Personalized settings" data-ar="إعدادات مخصصة">Personalized settings</span></span><span class="p">PARTIAL</span></div>
+            <div class="row"><span class="label"><span data-en="AI chatbot assistant" data-ar="مساعد ذكاء اصطناعي">AI chatbot assistant</span></span><span class="x">✗</span></div>
+            <div class="row"><span class="label"><span data-en="Dark / Light mode" data-ar="الوضع الداكن / الفاتح">Dark / Light mode</span></span><span class="x">✗</span></div>
+            <div class="row"><span class="label"><span data-en="Font size customisation" data-ar="تخصيص حجم الخط">Font size customisation</span></span><span class="x">✗</span></div>
+            <div class="row"><span class="label"><span data-en="Multi-channel support" data-ar="دعم متعدد القنوات">Multi-channel support</span></span><span class="x">✗</span></div>
+            <div class="row"><span class="label"><span data-en="Native RTL interface" data-ar="واجهة RTL أصلية">Native RTL interface</span></span><span class="x">✗</span></div>
+          </div>
+          <div class="tower wasla">
+            <h3>Wasla · وصلة<small><span data-en="Built for Saudi Arabia &amp; the GCC" data-ar="مصمم للسعودية والخليج">Built for Saudi Arabia &amp; the GCC</span></small></h3>
+            <div class="row"><span class="label"><span data-en="Arabic language support" data-ar="دعم اللغة العربية">Arabic language support</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Smart personalised offers" data-ar="عروض ذكية مخصصة">Smart personalised offers</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Cancellation guidance" data-ar="إرشاد الإلغاء">Cancellation guidance</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Spending analytics" data-ar="تحليلات الإنفاق">Spending analytics</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Personalized settings" data-ar="إعدادات مخصصة">Personalized settings</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="AI chatbot assistant" data-ar="مساعد ذكاء اصطناعي">AI chatbot assistant</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Dark / Light mode" data-ar="الوضع الداكن / الفاتح">Dark / Light mode</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Font size customisation" data-ar="تخصيص حجم الخط">Font size customisation</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Multi-channel support" data-ar="دعم متعدد القنوات">Multi-channel support</span></span><span class="v">✓</span></div>
+            <div class="row"><span class="label"><span data-en="Native RTL interface" data-ar="واجهة RTL أصلية">Native RTL interface</span></span><span class="v">✓</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 12: User Flow -->
+    <section class="slide next-out" data-title="User Flow">
+      <div class="slide-bg soft-purple"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="10 · USER FLOW · رحلة المستخدم" data-ar="رحلة المستخدم · 10">10 · USER FLOW · رحلة المستخدم</span></div>
+        <h2><span data-en="From sign-up to saved money, " data-ar="من التسجيل إلى التوفير، ">From sign-up to saved money, </span> <span class="hl" data-en="in 5 steps" data-ar="في 5 خطوات">in 5 steps</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="A linear, predictable flow that 5 think-aloud users completed without guidance during GP2 testing." data-ar="رحلة خطية ومتوقعة أكملها 5 مستخدمين في اختبار التفكير بصوت عالٍ بدون توجيه في GP2.">A linear, predictable flow that 5 think-aloud users completed without guidance during GP2 testing.</span></p>
+        <div class="flow-5">
+          <div class="flow-step"><div class="num">1</div><div class="ic material-icons-outlined">login</div><h4><span data-en="Register / Login" data-ar="تسجيل / دخول">Register / Login</span></h4><p><span data-en="Email + password, Google or Apple sign-in." data-ar="إيميل + كلمة مرور، دخول عبر Google أو Apple.">Email + password, Google or Apple sign-in.</span></p></div>
+          <div class="flow-step"><div class="num">2</div><div class="ic material-icons-outlined">add_box</div><h4>Add Subscription</h4><p><span data-en="Category, price, dates, reminder settings." data-ar="الفئة، السعر، التواريخ، إعدادات التذكير.">Category, price, dates, reminder settings.</span></p></div>
+          <div class="flow-step"><div class="num">3</div><div class="ic material-icons-outlined">insights</div><h4><span data-en="View Dashboard" data-ar="عرض الداشبورد">View Dashboard</span></h4><p><span data-en="Monthly / yearly spending with toggle." data-ar="إنفاق شهري / سنوي مع تبديل.">Monthly / yearly spending with toggle.</span></p></div>
+          <div class="flow-step"><div class="num">4</div><div class="ic material-icons-outlined">notifications_active</div><h4><span data-en="Get Reminders" data-ar="تلقي التذكيرات">Get Reminders</span></h4><p><span data-en="Notified 3 days before each renewal." data-ar="تنبيه قبل 3 أيام من كل تجديد.">Notified 3 days before each renewal.</span></p></div>
+          <div class="flow-step"><div class="num">5</div><div class="ic material-icons-outlined">savings</div><h4>Manage &amp; Save</h4><p><span data-en="Edit, cancel, smart offers, chatbot." data-ar="تعديل، إلغاء، عروض ذكية، مساعد.">Edit, cancel, smart offers, chatbot.</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 13: Tech Stack -->
+    <section class="slide next-out" data-title="Tech Stack">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="11 · TECH STACK · التقنيات" data-ar="التقنيات · 11">11 · TECH STACK · التقنيات</span></div>
+        <h2><span data-en="A modern, " data-ar="أساس ">A modern, </span> <span class="hl" data-en="accessible" data-ar="حديث ومتاح">accessible</span><span data-en=" foundation." data-ar="."> foundation.</span></h2>
+        <p class="lead"><span data-en="Cross-platform Flutter client, Firebase backend, deterministic AI, Material Design 3 with custom Wasla tokens." data-ar="عميل Flutter متعدد المنصات، خلفية Firebase، ذكاء اصطناعي محدد، Material Design 3 برموز وصلة المخصصة.">Cross-platform Flutter client, Firebase backend, deterministic AI, Material Design 3 with custom Wasla tokens.</span></p>
+        <div class="tech-grid-4">
+          <div class="tech-card"><div class="ic material-icons-outlined">phone_iphone</div><div><h4><span data-en="Flutter / Dart" data-ar="فلاتر / دارت">Flutter / Dart</span></h4><p><span data-en="iOS + Android from one codebase" data-ar="iOS + Android من قاعدة كود واحدة">iOS + Android from one codebase</span></p></div></div>
+          <div class="tech-card"><div class="ic material-icons-outlined">palette</div><div><h4>Material 3</h4><p>Custom Wasla design tokens</p></div></div>
+          <div class="tech-card"><div class="ic material-icons-outlined">whatshot</div><div><h4>Firebase</h4><p><span data-en="Auth · Firestore · Functions" data-ar="المصادقة · Firestore · Functions">Auth · Firestore · Functions</span></p></div></div>
+          <div class="tech-card"><div class="ic material-icons-outlined">campaign</div><div><h4>FCM</h4><p>Renewal alerts and pushes</p></div></div>
+          <div class="tech-card"><div class="ic material-icons-outlined">smart_toy</div><div><h4><span data-en="Deterministic AI" data-ar="ذكاء محدد الإجابات">Deterministic AI</span></h4><p><span data-en="Curated Arabic responses" data-ar="إجابات عربية منتقاة">Curated Arabic responses</span></p></div></div>
+          <div class="tech-card"><div class="ic material-icons-outlined">design_services</div><div><h4>Figma</h4><p><span data-en="High-fidelity prototypes" data-ar="نماذج أولية عالية الدقة">High-fidelity prototypes</span></p></div></div>
+          <div class="tech-card"><div class="ic material-icons-outlined">groups</div><div><h4>Provider / BLoC</h4><p><span data-en="State management" data-ar="إدارة الحالة">State management</span></p></div></div>
+          <div class="tech-card"><div class="ic material-icons-outlined">cloud_done</div><div><h4>Cloud Functions</h4><p><span data-en="Reminder scheduling" data-ar="جدولة التذكيرات">Reminder scheduling</span></p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 14: Roadmap -->
+    <section class="slide next-out" data-title="Roadmap">
+      <div class="slide-bg soft-purple"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="12 · ROADMAP · خارطة الطريق" data-ar="خارطة الطريق · 12">12 · ROADMAP · خارطة الطريق</span></div>
+        <h2><span data-en="From prototype to a " data-ar="من نموذج إلى ">From prototype to a </span> <span class="hl" data-en="smarter future" data-ar="مستقبل أذكى">smarter future</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="GP1 and GP2 are validated and shipped. Phase 3 unlocks the platform for personal finance." data-ar="GP1 و GP2 تم التحقق منهما وإطلاقهما. المرحلة 3 تفتح المنصة للتمويل الشخصي.">GP1 and GP2 are validated and shipped. Phase 3 unlocks the platform for personal finance.</span></p>
+        <div class="timeline-mini">
+          <div class="tl-card">
+            <span class="badge c">GP1 · Completed</span>
+            <h4><span data-en="Core CRUD + Dashboard" data-ar="CRUD + لوحة التحكم">Core CRUD + Dashboard</span></h4>
+            <p><span data-en="Add / edit / delete subscriptions, basic dashboard, reminder, login flow. Validated with 5 users." data-ar="إضافة وتعديل وحذف الاشتراكات، لوحة أساسية، تذكير، تسجيل دخول. تم التحقق مع 5 مستخدمين.">Add / edit / delete subscriptions, basic dashboard, reminder, login flow. Validated with 5 users.</span></p>
+          </div>
+          <div class="tl-card">
+            <span class="badge c">GP2 · Completed</span>
+            <h4><span data-en="AI + Offers + Cancellation" data-ar="ذكاء + عروض + إلغاء">AI + Offers + Cancellation</span></h4>
+            <p><span data-en="Deterministic Arabic chatbot, smart offers, step-by-step cancel, reminder editing, improved UI." data-ar="مساعد عربي محدد، عروض ذكية، إلغاء خطوة بخطوة، تعديل التذكيرات، واجهة محسنة.">Deterministic Arabic chatbot, smart offers, step-by-step cancel, reminder editing, improved UI.</span></p>
+          </div>
+          <div class="tl-card">
+            <span class="badge f">Phase 3 · Future</span>
+            <h4><span data-en="Bank Integration" data-ar="تكامل مع البنك">Bank Integration</span></h4>
+            <p><span data-en="Connect bank and payment platforms, auto-discover subscriptions, detect silent renewals." data-ar="ربط بالبنك ومنصات الدفع، اكتشاف تلقائي للاشتراكات، كشف التجديدات الصامتة.">Connect bank and payment platforms, auto-discover subscriptions, detect silent renewals.</span></p>
+          </div>
+          <div class="tl-card">
+            <span class="badge f">Phase 4 · Future</span>
+            <h4><span data-en="Advanced AI + Marketplace" data-ar="ذكاء متقدم + سوق">Advanced AI + Marketplace</span></h4>
+            <p><span data-en="Spending predictions, marketplace, family sharing, smarter recommendations." data-ar="توقعات الإنفاق، سوق، مشاركة عائلية، توصيات أذكى.">Spending predictions, marketplace, family sharing, smarter recommendations.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 15: Impact -->
+    <section class="slide next-out" data-title="Impact">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o2"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow"><span data-en="13 · IMPACT · IMPACT" data-ar="13 · IMPACT · الأثر">13 · IMPACT · الأثر</span></div>
+        <h2><span data-en="Designed around" data-ar="مصمم حول">Designed around</span> <span class="hl" data-en="real users, real data" data-ar="مستخدمين حقيقيين وبيانات حقيقية">real users, real data</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="A research-driven HCI project — every design decision is backed by a survey, an interview, or a usability test." data-ar="مشروع HCI قائم على البحث — كل قرار تصميمي مدعوم باستبيان أو مقابلة أو اختبار استخدام.">A research-driven HCI project — every design decision is backed by a survey, an interview, or a usability test.</span></p>
+        <div class="impact-4">
+          <div class="impact-card"><div class="num">221</div><h4><span data-en="Survey Participants" data-ar="مشارك في الاستبيان">Survey Participants</span></h4><p><span data-en="Young adults &amp; professionals across Saudi Arabia." data-ar="شباب ومحترفون في السعودية.">Young adults &amp; professionals across Saudi Arabia.</span></p></div>
+          <div class="impact-card"><div class="num">96.9%</div><h4><span data-en="Want Reminders" data-ar="يطلبون تذكيرات">Want Reminders</span></h4><p><span data-en="And didn't have them in any existing app." data-ar="ولا تتوفر في أي تطبيق حالي.">And didn't have them in any existing app.</span></p></div>
+          <div class="impact-card"><div class="num">50.7%</div><h4><span data-en="Hit by Surprise" data-ar="تعرضوا لمفاجآت">Hit by Surprise</span></h4><p><span data-en="Experienced at least one unexpected charge." data-ar="تعرضوا لرسوم غير متوقعة على الأقل مرة.">Experienced at least one unexpected charge.</span></p></div>
+          <div class="impact-card"><div class="num">19.41:1</div><h4><span data-en="WCAG Pass" data-ar="اجتياز WCAG">WCAG Pass</span></h4><p><span data-en="Contrast ratio verified AA &amp; AAA." data-ar="نسبة تباين محققة AA و AAA.">Contrast ratio verified AA &amp; AAA.</span></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 15: Team -->
+    <section class="slide next-out" data-title="Team">
+      <div class="slide-bg light-canvas"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow">14 · TEAM · الفريق</div>
+        <h2><span data-en="The people behind " data-ar="الأشخاص خلف ">The people behind </span> <span class="hl" data-en="Wasla" data-ar="وصلة">Wasla</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead"><span data-en="Six future HCI specialists from Umm Al-Qura University, guided by Dr. Reem Saleh Alshaikh at the College of Computing. Every name, every role, every credit." data-ar="ست متخصصات مستقبليات في HCI من جامعة أم القرى، بإرشاد د. ريم الشيخ من كلية الحاسبات. كل اسم، كل دور، كل حق.">Six future HCI specialists from Umm Al-Qura University, guided by Dr. Reem Saleh Alshaikh at the College of Computing. Every name, every role, every credit.</span></p>
+        <div class="team-grid">
+          <div class="team-card lead">
+            <div class="avatar">G</div>
+            <h4><span data-en="Ghadi Shaker Mutair Al-Fadhli" data-ar="غدي شاكر مطر الفاضلي">Ghadi Shaker Mutair Al-Fadhli</span></h4>
+            <div class="role"><span data-en="Team Lead · قائدة الفريق" data-ar="قائدة الفريق · Team Lead">Team Lead · قائدة الفريق</span></div>
+            <div class="role-ar">Frontend / غدي شاكر مطر الفاضلي</div>
+            <div class="id">444000760</div>
+          </div>
+          <div class="team-card">
+            <div class="avatar">K</div>
+            <h4><span data-en="Kholoud Sultan Atiq Al-Otaibi" data-ar="خلود سلطان عتيق العتيبي">Kholoud Sultan Atiq Al-Otaibi</span></h4>
+            <div class="role"><span data-en="UI/UX Designer · Researcher" data-ar="مصممة UX/UI · باحثة">UI/UX Designer · Researcher</span></div>
+            <div class="role-ar">خلود سلطان عتيق العتيبي</div>
+            <div class="id">444005515</div>
+          </div>
+          <div class="team-card">
+            <div class="avatar">E</div>
+            <h4><span data-en="Elaf Ahmad Abdulsttar Almaymani" data-ar="إيلاف أحمد عبد الستار الميماني">Elaf Ahmad Abdulsttar Almaymani</span></h4>
+            <div class="role"><span data-en="Backend Developer" data-ar="مطورة Backend">Backend Developer</span></div>
+            <div class="role-ar">إيلاف أحمد عبد الستار الميماني</div>
+            <div class="id">443008696</div>
+          </div>
+          <div class="team-card">
+            <div class="avatar">M</div>
+            <h4><span data-en="Maryam Zainalabidin Fatani" data-ar="مريم زين العابدين فطاني">Maryam Zainalabidin Fatani</span></h4>
+            <div class="role"><span data-en="Quality Assurance · Testing" data-ar="ضمان الجودة · اختبار">Quality Assurance · Testing</span></div>
+            <div class="role-ar">مريم زين العابدين فطاني</div>
+            <div class="id">444006766</div>
+          </div>
+          <div class="team-card">
+            <div class="avatar">K</div>
+            <h4><span data-en="Khadijah Ahmed Azab" data-ar="خديجة أحمد عزب">Khadijah Ahmed Azab</span></h4>
+            <div class="role"><span data-en="Documentation · Content" data-ar="توثيق · محتوى">Documentation · Content</span></div>
+            <div class="role-ar">خديجة أحمد عزب</div>
+            <div class="id">444001406</div>
+          </div>
+          <div class="team-card">
+            <div class="avatar">S</div>
+            <h4><span data-en="Suha Abdulrahman Turkistani" data-ar="سها عبد الرحمن تركستاني">Suha Abdulrahman Turkistani</span></h4>
+            <div class="role"><span data-en="AI / Chatbot Developer" data-ar="مطورة ذكاء / مساعد">AI / Chatbot Developer</span></div>
+            <div class="role-ar">سها عبد الرحمن تركستاني</div>
+            <div class="id">444006390</div>
+          </div>
+        </div>
+        <div class="supervisor-strip">
+          <img src="assets/screens/uqu-logo.png" alt="UQU" />
+          <div>
+            <div class="lbl"><span data-en="SUPERVISOR · المشرف" data-ar="المشرف · SUPERVISOR">SUPERVISOR · المشرف</span></div>
+            <div class="name"><span data-en="Dr. Reem Saleh Alshaikh · د. ريم الشيخ" data-ar="د. ريم الشيخ · Dr. Reem Saleh Alshaikh">Dr. Reem Saleh Alshaikh · د. ريم الشيخ</span></div>
+            <div class="meta"><span data-en="College of Computing · Umm Al-Qura University · كلية الحاسبات" data-ar="كلية الحاسبات · جامعة أم القرى · College of Computing">College of Computing · Umm Al-Qura University · كلية الحاسبات</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide next-out" data-title="Docs Summary">
+      <div class="slide-bg soft-purple"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o2"></div>
+      <div class="slide-inner">
+        <div class="slide-eyebrow">15 · DOCUMENTATION · التوثيق</div>
+        <h2><span data-en="Full technical documentation, " data-ar="توثيق تقني كامل، ">Full technical documentation, </span> <span class="hl" data-en="publicly available" data-ar="متاح للعموم">publicly available</span><span data-en="." data-ar=".">.</span></h2>
+        <p class="lead">A complete technical reference lives at <code style="background:var(--p-tint);padding:2px 6px;border-radius:4px;font-size:12px;color:var(--p-primary-d);">/docs</code> — design system, file tree, code samples, deployment guide, and accessibility audit.</p>
+        <div class="docs-grid">
+          <div class="docs-card"><div class="ic material-icons-outlined">palette</div><h4><span data-en="Design System" data-ar="نظام التصميم">Design System</span></h4><p>12 brand tokens, light &amp; dark variants, typography, spacing, motion, elevation.</p></div>
+          <div class="docs-card"><div class="ic material-icons-outlined">folder</div><h4><span data-en="File Tree" data-ar="شجرة الملفات">File Tree</span></h4><p>lib/models, lib/services, lib/providers, lib/screens, assets, with annotated responsibilities.</p></div>
+          <div class="docs-card"><div class="ic material-icons-outlined">code</div><h4><span data-en="Code Samples" data-ar="عينات الكود">Code Samples</span></h4><p><span data-en="Subscription model, SpendingChart, ChatbotService intent matcher, AuthService." data-ar="نموذج الاشتراك، مخطط الإنفاق، خدمة المساعد، خدمة المصادقة.">Subscription model, SpendingChart, ChatbotService intent matcher, AuthService.</span></p></div>
+          <div class="docs-card"><div class="ic material-icons-outlined">layers</div><h4>Architecture</h4><p>Three actors, Firebase integration, FCM reminders, Cloud Functions for scheduling.</p></div>
+          <div class="docs-card"><div class="ic material-icons-outlined">accessibility</div><h4>Accessibility</h4><p>WCAG 2.1 AAA contrast ratios, font scaling, dark mode, RTL audit, screen reader labels.</p></div>
+          <div class="docs-card"><div class="ic material-icons-outlined">rocket_launch</div><h4><span data-en="Deployment" data-ar="النشر">Deployment</span></h4><p>Vercel-ready static site, GitHub Actions CI, security headers, clean URLs, asset caching.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 17: Thank You -->
+    <section class="slide next-out" data-title="Thank You">
+      <div class="slide-bg soft-mesh"></div>
+      <div class="bg-orb o1"></div>
+      <div class="bg-orb o2"></div>
+      <div class="bg-orb o3"></div>
+      <div class="slide-inner" style="text-align:center; align-items:center;">
+        <div class="slide-eyebrow"><span data-en="END · النهاية" data-ar="النهاية · END">END · النهاية</span></div>
+        <h1 class="thanks-title">Thank You<span class="accent">.</span></h1>
+        <div class="thanks-ar"><span data-en="Thank You." data-ar="شكراً لكم">شكراً لكم</span></div>
+        <div class="thanks-meta">
+          <span class="chip"><span class="material-icons-outlined">mail</span> testuser@gmail.com</span>
+          <span class="chip"><span class="material-icons-outlined">key</span> 123A321</span>
+          <span class="chip"><span class="material-icons-outlined">person</span> <span data-en="Supervisor: Dr. Reem Saleh Alshaikh" data-ar="المشرفة: د. ريم الشيخ">Supervisor: Dr. Reem Saleh Alshaikh</span></span>
+          <span class="chip"><span class="material-icons-outlined">code</span> Flutter · Firebase · Dart</span>
+        </div>
+        <div class="thanks-uqu">
+          <img src="assets/screens/uqu-logo.png" alt="UQU" />
+          <span data-en="Umm Al-Qura University · College of Computing" data-ar="جامعة أم القرى · كلية الحاسبات">Umm Al-Qura University · College of Computing</span>
+        </div>
+        <div style="margin-top: 24px; color: var(--p-text-mute); font-size: 13px;">
+          <span data-en="Presented by the Wasla team · 2025–2026" data-ar="قدمه فريق وصلة · 2025–2026">Presented by the Wasla team · 2025–2026</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- /deck -->
+
+  <!-- Controls -->
+  <div class="deck-controls">
+    <button data-deck-prev aria-label="Previous slide"><span class="material-icons-outlined">chevron_left</span></button>
+    <span class="counter">01 / 18</span>
+    <button data-deck-next aria-label="Next slide"><span class="material-icons-outlined">chevron_right</span></button>
+    <button data-deck-play aria-label="Toggle autoplay"><span class="material-icons-outlined">play_arrow</span></button>
+    <button data-deck-actors aria-label="Jump to Architecture slide" title="Jump to Architecture (slide 7)">
+      <span class="material-icons-outlined">groups</span>
+    </button>
+    <button data-deck-lang aria-label="Toggle language" title="Toggle EN / عربي">
+      <span data-deck-lang-label data-en="EN" data-ar="عربي">EN</span>
+    </button>
+  </div>
+
+  <div class="slide-toc" role="navigation" aria-label="Slide navigation"></div>
+  <button class="fs-btn" aria-label="Toggle fullscreen"><span class="material-icons-outlined">fullscreen</span></button>
+  <div class="help-keys"><kbd>←</kbd> <kbd>→</kbd> · <kbd>F</kbd> fullscreen · <kbd>L</kbd> عربي/EN · <kbd>1</kbd>–<kbd>9</kbd> jump</div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/presentation.js" defer></script>
+</body>
+</html>

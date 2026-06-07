@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#420691" />
+  <title>Wasla — Technical Documentation</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23420691'/><path d='M11 11l10 10M21 11L11 21' stroke='%23ffffff' stroke-width='3' stroke-linecap='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/docs.css" />
+</head>
+<body class="docs">
+  <!-- Top nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><span class="material-icons-outlined">link</span></span>
+        <span class="brand-text">
+          <span class="en">WASLA</span>
+          <span class="ar" style="font-family: var(--font-ar); font-size: 12px; color: var(--wasla-text-muted); font-weight: 600; margin-top: 2px;">وصلة</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Hub</a>
+        <a href="presentation.html">Presentation</a>
+        <a class="active" href="docs.html">Docs</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-ghost btn-magnetic" href="index.html" style="border-color: var(--wasla-border-soft);">
+          <span class="material-icons-outlined">arrow_back</span> Hub
+        </a>
+        <a class="btn btn-magnetic" href="presentation.pdf" target="_blank" style="color: #fff; background: var(--wasla-primary); border: 0; box-shadow: 0 6px 16px rgba(151,71,255,0.25);">
+          <span class="material-icons-outlined">picture_as_pdf</span> PDF
+        </a>
+        <a class="btn btn-magnetic" href="presentation.pptx" download style="color: #fff; background: linear-gradient(135deg, #FFB13B 0%, #E84A2C 100%); border: 0; box-shadow: 0 6px 16px rgba(232,74,44,0.25);">
+          <span class="material-icons-outlined">download</span> .pptx
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="docs-layout">
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="docs-sidebar">
+      <h4>Overview</h4>
+      <a href="#overview"><span class="num">i</span>Introduction</a>
+      <a href="#quick-facts"><span class="num">ii</span>Quick Facts</a>
+
+      <h4>Project</h4>
+      <a href="#identity"><span class="num">1</span>Identity &amp; Brand</a>
+      <a href="#colors"><span class="num">2</span>Brand Colors</a>
+      <a href="#screens"><span class="num">3</span>App Screens</a>
+      <a href="#problem"><span class="num">4</span>The Problem</a>
+      <a href="#solution"><span class="num">5</span>The Solution</a>
+      <a href="#features"><span class="num">6</span>Key Features</a>
+
+      <h4>Engineering</h4>
+      <a href="#architecture"><span class="num">7</span>Architecture &amp; Actors</a>
+      <a href="#file-tree"><span class="num">8</span>File Structure</a>
+      <a href="#data-model"><span class="num">9</span>Data Model</a>
+      <a href="#code"><span class="num">10</span>Code Highlights</a>
+      <a href="#tech-stack"><span class="num">11</span>Tech Stack</a>
+
+      <h4>Research &amp; QA</h4>
+      <a href="#research"><span class="num">12</span>Research Method</a>
+      <a href="#testing"><span class="num">13</span>Testing Results</a>
+      <a href="#accessibility"><span class="num">14</span>Accessibility (WCAG)</a>
+      <a href="#comparison"><span class="num">15</span>Competitive Analysis</a>
+
+      <h4>Delivery</h4>
+      <a href="#roadmap"><span class="num">16</span>Roadmap</a>
+      <a href="#team"><span class="num">17</span>Team</a>
+      <a href="#deploy"><span class="num">18</span>Deployment</a>
+    </aside>
+
+    <!-- ========== CONTENT ========== -->
+    <main class="docs-content">
+      <h1 id="overview">Wasla · وصلة<span class="ar">مركز اشتراكاتك الذكي — تتبع، أدر، ووفر</span></h1>
+      <p>
+        <strong>Wasla</strong> is a senior Human-Computer Interaction (HCI) project from
+        <strong>Umm Al-Qura University — College of Computing</strong>. It is a bilingual
+        (Arabic-first, RTL) mobile app for tracking, managing, and saving on
+        digital and physical subscriptions.
+      </p>
+      <p>
+        This page is the project's technical documentation. It includes brand guidelines,
+        architecture, code highlights, research methodology, testing results, accessibility
+        verification, and deployment notes — every claim is backed by either the project
+        report or the running Flutter app.
+      </p>
+
+      <div class="docs-lead" id="quick-facts">
+        <h2 style="margin-top:0;">Quick Facts · حقائق سريعة</h2>
+        <p>Everything you need to know about Wasla in 30 seconds.</p>
+        <div class="quick-facts">
+          <div class="qf"><strong>Tagline (EN)</strong><span>Your Smart Subscription Hub</span></div>
+          <div class="qf"><strong>Tagline (AR)</strong><span style="direction:rtl; font-family:var(--font-ar);">مركز اشتراكاتك الذكي</span></div>
+          <div class="qf"><strong>Domain</strong><span>Subscription management</span></div>
+          <div class="qf"><strong>Audience</strong><span>Young adults · KSA / GCC</span></div>
+          <div class="qf"><strong>Languages</strong><span>Arabic (RTL) + English (LTR)</span></div>
+          <div class="qf"><strong>Platform</strong><span>iOS · Android (Flutter)</span></div>
+          <div class="qf"><strong>Backend</strong><span>Firebase</span></div>
+          <div class="qf"><strong>Supervisor</strong><span>Dr. Reem Saleh Alashaikh</span></div>
+          <div class="qf"><strong>Academic year</strong><span>2025–2026</span></div>
+        </div>
+      </div>
+
+      <div class="callout ok">
+        <div class="ic material-icons-outlined">verified</div>
+        <div>
+          <h4>Accessibility verified</h4>
+          <p>WCAG 2.1 AA &amp; AAA contrast ratios confirmed: 19.41 (normal text), 11.56 (large text), 15.42 and 12.57 across primary brand combinations.</p>
+        </div>
+      </div>
+
+      <h2 id="identity">Project Identity &amp; Brand</h2>
+      <p>Wasla (وصلة, literally "link" or "connection") is a human-centred subscription
+      manager for the Saudi / GCC market. The brand combines a deep purple identity
+      with a friendly Arabic-first experience.</p>
+
+      <div class="docs-cols">
+        <div class="docs-col">
+          <h4>Tagline (English)</h4>
+          <p style="font-size:17px; font-weight:800; color: var(--wasla-primary-dark);">"Your Smart Subscription Hub — Track, Manage &amp; Save"</p>
+        </div>
+        <div class="docs-col">
+          <h4>Tagline (Arabic)</h4>
+          <p style="font-size:17px; font-weight:800; color: var(--wasla-primary-dark); font-family: var(--font-ar); direction: rtl;">"مركز اشتراكاتك الذكي — تتبع، أدر، ووفر"</p>
+        </div>
+      </div>
+
+      <h2 id="colors">Brand Colors</h2>
+      <p>The palette below is extracted directly from the Figma source-of-truth and the running app.</p>
+      <div class="color-grid">
+        <div class="swatch"><div class="chip" style="background:#420691;"></div><div class="meta"><div class="name">Primary Dark</div><div class="hex">#420691</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#502c96;"></div><div class="meta"><div class="name">Primary</div><div class="hex">#502c96</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#56369c;"></div><div class="meta"><div class="name">Primary Accent</div><div class="hex">#56369c</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#0C3571;"></div><div class="meta"><div class="name">Dark Blue</div><div class="hex">#0C3571</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#dadbf1;"></div><div class="meta"><div class="name">Light Blue</div><div class="hex">#dadbf1</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#c0c1d7;"></div><div class="meta"><div class="name">Pastel Steel</div><div class="hex">#c0c1d7</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#E84A2C;"></div><div class="meta"><div class="name">Accent Orange</div><div class="hex">#E84A2C</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#0A6B8A;"></div><div class="meta"><div class="name">Accent Blue</div><div class="hex">#0A6B8A</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#2E8B57;"></div><div class="meta"><div class="name">Accent Green</div><div class="hex">#2E8B57</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#FFB13B;"></div><div class="meta"><div class="name">Accent Gold</div><div class="hex">#FFB13B</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#EDE8F5;"></div><div class="meta"><div class="name">Purple Tint</div><div class="hex">#EDE8F5</div></div></div>
+        <div class="swatch"><div class="chip" style="background:#F5F5F5;"></div><div class="meta"><div class="name">Page Background</div><div class="hex">#F5F5F5</div></div></div>
+      </div>
+
+      <h3>Gradient combinations</h3>
+      <div class="code-wrap">
+        <div class="code-head">
+          <span class="file">design-tokens.css</span>
+          <div class="actions"><button><span class="material-icons-outlined" style="font-size:14px;">content_copy</span>Copy</button></div>
+        </div>
+<pre><code><span class="code-comment">/* Hero gradient */</span>
+background: <span class="code-fn">linear-gradient</span>(<span class="code-num">135</span>deg, #<span class="code-string">420691</span> <span class="code-num">0</span>%, #<span class="code-string">56369c</span> <span class="code-num">50</span>%, #<span class="code-string">0C3571</span> <span class="code-num">100</span>%);
+
+<span class="code-comment">/* Login / signup gradient */</span>
+background: <span class="code-fn">linear-gradient</span>(<span class="code-num">180</span>deg, #<span class="code-string">420691</span> <span class="code-num">0</span>%, #<span class="code-string">502c96</span> <span class="code-num">50</span>%, #<span class="code-string">0C3571</span> <span class="code-num">100</span>%);
+
+<span class="code-comment">/* Dark section */</span>
+background: <span class="code-fn">linear-gradient</span>(<span class="code-num">180</span>deg, #<span class="code-string">420691</span> <span class="code-num">0</span>%, #<span class="code-string">0C3571</span> <span class="code-num">100</span>%);</code></pre>
+      </div>
+
+      <h2 id="screens">App Screens</h2>
+      <p>Twelve real screens, designed in Figma, validated in usability tests, and built in Flutter.</p>
+      <div class="docs-screens">
+        <div class="docs-screen">
+          <img src="assets/screens/01-login.jpeg" alt="Login" />
+          <div class="label"><span class="ar">تسجيل الدخول</span><span>01</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/02-signup.jpeg" alt="Sign up" />
+          <div class="label"><span class="ar">إنشاء حساب</span><span>02</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/03-home.jpeg" alt="Home" />
+          <div class="label"><span class="ar">الرئيسية</span><span>03</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/04-dashboard.jpeg" alt="Dashboard" />
+          <div class="label"><span class="ar">لوحة التحكم</span><span>04</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/05-add-subscription.jpeg" alt="Add" />
+          <div class="label"><span class="ar">إضافة اشتراك</span><span>05</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/06-details.jpeg" alt="Details" />
+          <div class="label"><span class="ar">معلومات الاشتراك</span><span>06</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/07-cancellation.jpeg" alt="Cancellation" />
+          <div class="label"><span class="ar">تعليمات الإلغاء</span><span>07</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/08-chatbot.jpeg" alt="Chatbot" />
+          <div class="label"><span class="ar">المساعد الذكي</span><span>08</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/09-profile.jpeg" alt="Profile" />
+          <div class="label"><span class="ar">الملف الشخصي</span><span>09</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/11-offers.jpeg" alt="Offers" />
+          <div class="label"><span class="ar">العروض الذكية</span><span>10</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/12-accessibility.jpeg" alt="Accessibility" />
+          <div class="label"><span class="ar">إمكانية الوصول</span><span>11</span></div>
+        </div>
+        <div class="docs-screen">
+          <img src="assets/screens/03b-home-en.jpeg" alt="English" />
+          <div class="label"><span>English LTR</span><span>12</span></div>
+        </div>
+      </div>
+
+      <h2 id="problem">The Problem</h2>
+      <p>Before building anything, the team surveyed 221 young adults and professionals
+      in Saudi Arabia and ran 6 in-depth interviews. The data is unambiguous: existing
+      tools fail Saudi users in four concrete ways.</p>
+
+      <table class="docs-table">
+        <thead>
+          <tr><th>Pain point</th><th>Stat</th><th>What users said</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Unexpected charges</td>
+            <td><strong>50.7%</strong></td>
+            <td>Forgotten subscriptions silently renew and surprise users with bills they didn't anticipate.</td>
+          </tr>
+          <tr>
+            <td>No renewal reminders</td>
+            <td><strong>96.9%</strong></td>
+            <td>Almost all users want timely renewal alerts — but no existing tool provides them out of the box.</td>
+          </tr>
+          <tr>
+            <td>Unaware of top costs</td>
+            <td><strong>48%</strong></td>
+            <td>Nearly half of users can't tell which single subscription costs them the most.</td>
+          </tr>
+          <tr>
+            <td>Fragmented &amp; not Arabic</td>
+            <td><strong>—</strong></td>
+            <td>Existing tools juggle multiple platforms with no unified view — and almost none support Arabic RTL.</td>
+          </tr>
+          <tr>
+            <td>Financial waste</td>
+            <td><strong>—</strong></td>
+            <td>Forgotten renewals silently drain monthly budgets across streaming, gym, software, and SaaS.</td>
+          </tr>
+          <tr>
+            <td>No cancellation guidance</td>
+            <td><strong>—</strong></td>
+            <td>Users don't know how to cancel subscriptions properly — apps hide the exit.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="solution">The Solution</h2>
+      <p>Wasla provides a centralised, Arabic-first, accessible platform to manage every
+      subscription in one place — with timely reminders and clear financial visibility.</p>
+
+      <div class="callout">
+        <div class="ic material-icons-outlined">track_changes</div>
+        <div>
+          <h4>3 days before — by default</h4>
+          <p>Smart reminders fire automatically before every renewal. The interval is configurable per subscription, but 3 days is the sweet spot the team settled on after GP1 testing.</p>
+        </div>
+      </div>
+
+      <h2 id="features">Key Features</h2>
+      <p>Eight core features, each with its own real Arabic name, icon, and design rationale.</p>
+      <div class="docs-cols">
+        <div class="docs-col">
+          <h4>1. Authentication · تسجيل الدخول</h4>
+          <p>Email + password, Google and Apple sign-in. Encrypted at rest, OAuth 2.0, 2-step email verification for password reset.</p>
+        </div>
+        <div class="docs-col">
+          <h4>2. Add Subscription · إضافة اشتراك</h4>
+          <p>Manual entry of category, price, billing cycle, dates, reminder settings, contact info for the cancellation guide.</p>
+        </div>
+        <div class="docs-col">
+          <h4>3. Edit &amp; Delete · تعديل / حذف</h4>
+          <p>Update or remove subscriptions anytime with confirmation dialogs and a soft-delete grace period.</p>
+        </div>
+        <div class="docs-col">
+          <h4>4. Dashboard · لوحة التحكم</h4>
+          <p>Visual spending insights: monthly, yearly, average, count, plus a live chart with a Monthly / Yearly toggle.</p>
+        </div>
+        <div class="docs-col">
+          <h4>5. Smart Offers · العروض الذكية</h4>
+          <p>Personalised deals: Netflix 15% off, Fitness Time 10% off annual plan. Value without dark patterns.</p>
+        </div>
+        <div class="docs-col">
+          <h4>6. Notifications · التنبيهات</h4>
+          <p>Timely renewal and spending alerts, configurable per subscription, sent through Firebase Cloud Messaging.</p>
+        </div>
+        <div class="docs-col">
+          <h4>7. Smart Chatbot · المساعد الذكي</h4>
+          <p>Deterministic Arabic assistant: add, cancel, configure notifications, contact support — all from the chat.</p>
+        </div>
+        <div class="docs-col">
+          <h4>8. Settings · الإعدادات</h4>
+          <p>Language (AR/EN), dark / light mode, font size (small / medium / large), notification preferences.</p>
+        </div>
+      </div>
+
+      <h2 id="architecture">Architecture &amp; Actors</h2>
+      <p>The system is built around three core actors, each with a clear responsibility split.</p>
+      <div class="arch-diagram">
+        <div class="arch-box user">
+          <div class="ic material-icons-outlined">person</div>
+          <h4>User Actor</h4>
+          <p>Manages subscriptions (CRUD), views dashboard, receives reminders, talks to the chatbot, customises settings, views offers and cancellation guides, contacts support.</p>
+        </div>
+        <div class="arch-box admin">
+          <div class="ic material-icons-outlined">admin_panel_settings</div>
+          <h4>Admin Actor</h4>
+          <p>Manages advertisements, manages promotional offers, sends notifications, views system analytics.</p>
+        </div>
+        <div class="arch-box sys">
+          <div class="ic material-icons-outlined">memory</div>
+          <h4>System Actor</h4>
+          <p>Monitors renewal dates, generates automated notifications, processes spending analytics, stores preferences locally, re-renders all screens when mode changes.</p>
+        </div>
+      </div>
+
+      <h2 id="file-tree">File Structure</h2>
+      <p>The Flutter project follows a feature-first layout, with screens, widgets, models, providers, and services grouped by purpose.</p>
+      <div class="file-tree"><span class="dir">wasla-app/</span>
+├── <span class="dir">lib/</span>
+│   ├── <span class="file">main.dart</span>
+│   ├── <span class="dir">screens/</span>
+│   │   ├── <span class="file">login_screen.dart</span>
+│   │   ├── <span class="file">signup_screen.dart</span>
+│   │   ├── <span class="file">home_screen.dart</span>
+│   │   ├── <span class="file">dashboard_screen.dart</span>
+│   │   ├── <span class="file">add_subscription_screen.dart</span>
+│   │   ├── <span class="file">subscription_details_screen.dart</span>
+│   │   ├── <span class="file">cancellation_guide_screen.dart</span>
+│   │   ├── <span class="file">chatbot_screen.dart</span>
+│   │   ├── <span class="file">profile_screen.dart</span>
+│   │   └── <span class="file">contact_support_screen.dart</span>
+│   ├── <span class="dir">widgets/</span>
+│   │   ├── <span class="file">custom_button.dart</span>
+│   │   ├── <span class="file">subscription_card.dart</span>
+│   │   ├── <span class="file">analytics_chart.dart</span>
+│   │   ├── <span class="file">smart_offer_card.dart</span>
+│   │   └── <span class="file">chat_bubble.dart</span>
+│   ├── <span class="dir">models/</span>
+│   │   └── <span class="file">subscription_model.dart</span>
+│   ├── <span class="dir">providers/</span>
+│   │   └── <span class="file">subscription_provider.dart</span>
+│   └── <span class="dir">services/</span>
+│       ├── <span class="file">firebase_service.dart</span>
+│       ├── <span class="file">notification_service.dart</span>
+│       └── <span class="file">chatbot_service.dart</span>
+├── <span class="dir">assets/</span>
+│   ├── <span class="dir">images/</span>
+│   └── <span class="dir">fonts/</span>
+├── <span class="file">pubspec.yaml</span>
+└── <span class="file">README.md</span>
+<span class="note"># Folder names are in English to keep Flutter / Dart conventions;
+# all user-facing text is in Arabic with English fallback.</span></div>
+
+      <h2 id="data-model">Data Model</h2>
+      <p>The core <code>Subscription</code> model is intentionally small and
+      serialisable to Firestore. It captures every field the UI needs to render
+      a card, a detail screen, and a cancellation guide.</p>
+
+      <div class="code-wrap">
+        <div class="code-head">
+          <span class="file">lib/models/subscription_model.dart</span>
+          <div class="actions"><button><span class="material-icons-outlined" style="font-size:14px;">content_copy</span>Copy</button></div>
+        </div>
+<pre><code><span class="code-keyword">class</span> <span class="code-type">Subscription</span> {
+  <span class="code-keyword">final</span> <span class="code-type">String</span> id;
+  <span class="code-keyword">final</span> <span class="code-type">String</span> name;
+  <span class="code-keyword">final</span> <span class="code-type">String</span> category;        <span class="code-comment">// تنفليكس / شاهد / فيتنس</span>
+  <span class="code-keyword">final</span> <span class="code-type">double</span> cost;
+  <span class="code-keyword">final</span> <span class="code-type">String</span> billingCycle;    <span class="code-comment">// شهري / سنوي</span>
+  <span class="code-keyword">final</span> <span class="code-type">DateTime</span> startDate;
+  <span class="code-keyword">final</span> <span class="code-type">DateTime</span> renewalDate;
+  <span class="code-keyword">final</span> <span class="code-type">int</span> reminderDays;    <span class="code-comment">// default: 3</span>
+  <span class="code-keyword">final</span> <span class="code-type">String</span>? notes;
+  <span class="code-keyword">final</span> <span class="code-type">bool</span> isActive;
+  <span class="code-keyword">final</span> <span class="code-type">String</span>? contactInfo;   <span class="code-comment">// for cancellation guide</span>
+
+  <span class="code-type">Subscription</span>({
+    <span class="code-keyword">required this</span>.id,
+    <span class="code-keyword">required this</span>.name,
+    <span class="code-keyword">required this</span>.category,
+    <span class="code-keyword">required this</span>.cost,
+    <span class="code-keyword">this</span>.billingCycle = <span class="code-string">"شهري"</span>,
+    <span class="code-keyword">required this</span>.startDate,
+    <span class="code-keyword">required this</span>.renewalDate,
+    <span class="code-keyword">this</span>.reminderDays = <span class="code-num">3</span>,
+    <span class="code-keyword">this</span>.notes,
+    <span class="code-keyword">this</span>.isActive = <span class="code-keyword">true</span>,
+    <span class="code-keyword">this</span>.contactInfo,
+  });
+
+  <span class="code-type">Map</span>&lt;<span class="code-type">String</span>, <span class="code-type">dynamic</span>&gt; <span class="code-fn">toJson</span>() =&gt; {
+    <span class="code-string">'id'</span>: id,
+    <span class="code-string">'name'</span>: name,
+    <span class="code-string">'category'</span>: category,
+    <span class="code-string">'cost'</span>: cost,
+    <span class="code-string">'billingCycle'</span>: billingCycle,
+    <span class="code-string">'startDate'</span>: startDate.<span class="code-fn">toIso8601String</span>(),
+    <span class="code-string">'renewalDate'</span>: renewalDate.<span class="code-fn">toIso8601String</span>(),
+    <span class="code-string">'reminderDays'</span>: reminderDays,
+    <span class="code-string">'notes'</span>: notes,
+    <span class="code-string">'isActive'</span>: isActive,
+    <span class="code-string">'contactInfo'</span>: contactInfo,
+  };
+}</code></pre>
+      </div>
+
+      <h2 id="code">Code Highlights</h2>
+      <p>Three representative snippets that show the project's idioms.</p>
+
+      <h3>1. Dashboard spending chart</h3>
+      <p>A single widget that toggles between monthly and yearly spending with a gradient header.</p>
+      <div class="code-wrap">
+        <div class="code-head">
+          <span class="file">lib/widgets/analytics_chart.dart</span>
+          <div class="actions"><button><span class="material-icons-outlined" style="font-size:14px;">content_copy</span>Copy</button></div>
+        </div>
+<pre><code><span class="code-keyword">class</span> <span class="code-type">SpendingChart</span> <span class="code-keyword">extends</span> <span class="code-type">StatelessWidget</span> {
+  <span class="code-keyword">final</span> <span class="code-type">List</span>&lt;<span class="code-type">Subscription</span>&gt; subscriptions;
+  <span class="code-keyword">final</span> <span class="code-type">bool</span> isMonthly;   <span class="code-comment">// toggle from dashboard</span>
+
+  <span class="code-keyword">const</span> <span class="code-type">SpendingChart</span>({<span class="code-keyword">super</span>.key, <span class="code-keyword">required this</span>.subscriptions, <span class="code-keyword">required this</span>.isMonthly});
+
+  <span class="code-keyword">@override</span>
+  <span class="code-type">Widget</span> <span class="code-fn">build</span>(<span class="code-type">BuildContext</span> context) {
+    <span class="code-keyword">final</span> total = isMonthly
+      ? subscriptions.where((s) =&gt; s.isActive)
+          .fold&lt;<span class="code-type">double</span>&gt;(<span class="code-num">0</span>, (sum, s) =&gt; sum + s.cost)
+      : subscriptions.where((s) =&gt; s.isActive)
+          .fold&lt;<span class="code-type">double</span>&gt;(<span class="code-num">0</span>, (sum, s) =&gt; sum + s.cost * <span class="code-num">12</span>);
+
+    <span class="code-keyword">return</span> <span class="code-type">Container</span>(
+      padding: <span class="code-keyword">const</span> <span class="code-type">EdgeInsets</span>.all(<span class="code-num">20</span>),
+      decoration: <span class="code-type">BoxDecoration</span>(
+        gradient: <span class="code-keyword">const</span> <span class="code-type">LinearGradient</span>(
+          colors: [<span class="code-type">Color</span>(<span class="code-num">0xFF420691</span>), <span class="code-type">Color</span>(<span class="code-num">0xFF56369c</span>)],
+          begin: <span class="code-type">Alignment</span>.topLeft, end: <span class="code-type">Alignment</span>.bottomRight,
+        ),
+        borderRadius: <span class="code-type">BorderRadius</span>.circular(<span class="code-num">22</span>),
+      ),
+      child: <span class="code-type">Column</span>(
+        crossAxisAlignment: <span class="code-type">CrossAxisAlignment</span>.start,
+        children: [
+          <span class="code-type">Text</span>(isMonthly ? <span class="code-string">'الإنفاق الشهري'</span> : <span class="code-string">'الإنفاق السنوي'</span>,
+            style: <span class="code-keyword">const</span> <span class="code-type">TextStyle</span>(color: <span class="code-type">Colors</span>.white70, fontSize: <span class="code-num">14</span>)),
+          <span class="code-keyword">const</span> <span class="code-type">SizedBox</span>(height: <span class="code-num">8</span>),
+          <span class="code-type">Text</span>(<span class="code-string">'</span><span class="code-num">$</span><span class="code-string">{total.toStringAsFixed(2)} ر.س'</span>,
+            style: <span class="code-keyword">const</span> <span class="code-type">TextStyle</span>(color: <span class="code-type">Colors</span>.white, fontSize: <span class="code-num">32</span>, fontWeight: <span class="code-type">FontWeight</span>.bold)),
+        ],
+      ),
+    );
+  }
+}</code></pre>
+      </div>
+
+      <h3>2. Chatbot service — deterministic retrieval</h3>
+      <p>The chatbot is <strong>not</strong> generative. Every response is a curated
+      Arabic string from a hand-written map — no hallucination risk.</p>
+      <div class="code-wrap">
+        <div class="code-head">
+          <span class="file">lib/services/chatbot_service.dart</span>
+          <div class="actions"><button><span class="material-icons-outlined" style="font-size:14px;">content_copy</span>Copy</button></div>
+        </div>
+<pre><code><span class="code-keyword">class</span> <span class="code-type">ChatbotService</span> {
+  <span class="code-keyword">static final</span> <span class="code-type">Map</span>&lt;<span class="code-type">String</span>, <span class="code-type">String</span>&gt; _responses = {
+    <span class="code-string">'كيفية إضافة اشتراك'</span>:
+      <span class="code-string">'1. اضغط زر +\n'</span>
+      <span class="code-string">'2. اختر فئة الاشتراك\n'</span>
+      <span class="code-string">'3. أدخل السعر وتاريخ البدء\n'</span>
+      <span class="code-string">'4. حدد موعد التذكير\n'</span>
+      <span class="code-string">'5. اضغط حفظ'</span>,
+    <span class="code-string">'كيفية إلغاء اشتراك'</span>:
+      <span class="code-string">'1. افتح تفاصيل الاشتراك\n'</span>
+      <span class="code-string">'2. اضغط "تعليمات الإلغاء"\n'</span>
+      <span class="code-string">'3. اتبع الخطوات على الموقع الرسمي\n'</span>
+      <span class="code-string">'⚠️ حذف الاشتراك من التطبيق لا يلغيه فعلياً!'</span>,
+    <span class="code-string">'إعدادات التنبيهات'</span>:
+      <span class="code-string">'الملف الشخصي → إعدادات الإشعارات\nحدد عدد الأيام قبل التجديد'</span>,
+    <span class="code-string">'التواصل مع الدعم'</span>:
+      <span class="code-string">'• واتساب\n• البريد الإلكتروني\n• اتصال هاتفي'</span>,
+  };
+
+  <span class="code-keyword">static</span> <span class="code-type">String</span> <span class="code-fn">getResponse</span>(<span class="code-type">String</span> query) {
+    <span class="code-keyword">for</span> (<span class="code-keyword">final</span> e <span class="code-keyword">in</span> _responses.entries) {
+      <span class="code-keyword">if</span> (query.contains(e.key)) <span class="code-keyword">return</span> e.value;
+    }
+    <span class="code-keyword">return</span> <span class="code-string">'عذراً، لم أفهم سؤالك. جرب:\n• كيفية إضافة اشتراك\n• كيفية إلغاء اشتراك\n• إعدادات التنبيهات\n• التواصل مع الدعم'</span>;
+  }
+}</code></pre>
+      </div>
+
+      <h3>3. Provider — reactive subscription list</h3>
+      <div class="code-wrap">
+        <div class="code-head">
+          <span class="file">lib/providers/subscription_provider.dart</span>
+          <div class="actions"><button><span class="material-icons-outlined" style="font-size:14px;">content_copy</span>Copy</button></div>
+        </div>
+<pre><code><span class="code-keyword">class</span> <span class="code-type">SubscriptionProvider</span> <span class="code-keyword">extends</span> <span class="code-type">ChangeNotifier</span> {
+  <span class="code-keyword">final</span> <span class="code-type">List</span>&lt;<span class="code-type">Subscription</span>&gt; _items = [];
+  <span class="code-type">List</span>&lt;<span class="code-type">Subscription</span>&gt; <span class="code-fn">get</span> items =&gt; <span class="code-type">List</span>.unmodifiable(_items);
+
+  <span class="code-type">double</span> <span class="code-fn">get</span> monthlyTotal =&gt;
+    _items.where((s) =&gt; s.isActive).fold(<span class="code-num">0</span>, (sum, s) =&gt; sum + s.cost);
+
+  <span class="code-type">double</span> <span class="code-fn">get</span> yearlyTotal =&gt; monthlyTotal * <span class="code-num">12</span>;
+
+  <span class="code-type">Future</span>&lt;<span class="code-type">void</span>&gt; <span class="code-fn">add</span>(<span class="code-type">Subscription</span> s) <span class="code-keyword">async</span> {
+    _items.add(s);
+    <span class="code-keyword">await</span> <span class="code-type">FirebaseService</span>.saveSubscription(s);
+    <span class="code-fn">notifyListeners</span>();
+  }
+
+  <span class="code-type">Future</span>&lt;<span class="code-type">void</span>&gt; <span class="code-fn">remove</span>(<span class="code-type">String</span> id) <span class="code-keyword">async</span> {
+    _items.removeWhere((s) =&gt; s.id == id);
+    <span class="code-keyword">await</span> <span class="code-type">FirebaseService</span>.deleteSubscription(id);
+    <span class="code-fn">notifyListeners</span>();
+  }
+}</code></pre>
+      </div>
+
+      <h2 id="tech-stack">Tech Stack</h2>
+      <table class="docs-table">
+        <thead>
+          <tr><th>Layer</th><th>Technology</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Frontend</td><td>Flutter (Dart)</td><td>Single codebase, native iOS + Android performance, mature RTL support.</td></tr>
+          <tr><td>UI framework</td><td>Material Design 3</td><td>Accessibility, theming, components that compose well with custom tokens.</td></tr>
+          <tr><td>State management</td><td>Provider / BLoC</td><td>Predictable, testable, low boilerplate.</td></tr>
+          <tr><td>Authentication</td><td>Firebase Auth</td><td>Email + password, Google, Apple, OAuth 2.0.</td></tr>
+          <tr><td>Database</td><td>Firestore</td><td>Real-time sync, offline support, security rules.</td></tr>
+          <tr><td>Notifications</td><td>FCM (Firebase Cloud Messaging)</td><td>Cross-platform push with deep-linking to subscription details.</td></tr>
+          <tr><td>Storage</td><td>Firebase Storage</td><td>Subscription icons and category images.</td></tr>
+          <tr><td>Analytics</td><td>Firebase Analytics</td><td>Funnel reports, retention, feature usage.</td></tr>
+          <tr><td>AI / Chatbot</td><td>Deterministic retrieval</td><td>Curated Arabic responses — no hallucination, fully predictable.</td></tr>
+          <tr><td>Design tool</td><td>Figma</td><td>Single source of truth for the design system and prototypes.</td></tr>
+          <tr><td>IDE</td><td>VS Code / Android Studio</td><td>Both officially supported by Flutter.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="research">Research Method</h2>
+      <p>Wasla is a research-driven project. Every feature is grounded in user data.</p>
+      <div class="stat-block">
+        <div class="stat-cell"><div class="v">221</div><div class="l">Survey Participants</div></div>
+        <div class="stat-cell"><div class="v">6</div><div class="l">In-depth Interviews</div></div>
+        <div class="stat-cell"><div class="v">5</div><div class="l">Usability Test Users</div></div>
+      </div>
+      <p>Participants were recruited through university mailing lists, social media, and snowball sampling. The instrument combined Likert-scale items, ranking questions, and three open-ended prompts about subscription pain points.</p>
+      <p>Usability testing used the <strong>Think Aloud</strong> method with 5 active users on a build of the app. Each session lasted ~25 minutes, was recorded, and transcribed for thematic analysis.</p>
+
+      <h2 id="testing">Testing Results</h2>
+      <p>Across the 5 think-aloud participants, every test case passed. The most
+      important improvements between GP1 and GP2:</p>
+      <table class="docs-table">
+        <thead>
+          <tr><th>Aspect</th><th>GP1</th><th>GP2</th><th>Improvement</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Add Subscription</td>
+            <td>Button small / unclear, 55s to complete</td>
+            <td>Easy, clear button</td>
+            <td>Improved visibility</td>
+          </tr>
+          <tr>
+            <td>UI</td>
+            <td>Small fonts, unclear layout</td>
+            <td>Clear, organized</td>
+            <td>Better organization</td>
+          </tr>
+          <tr>
+            <td>Dashboard</td>
+            <td>Unnecessary elements</td>
+            <td>Clear monthly / yearly</td>
+            <td>Better presentation</td>
+          </tr>
+          <tr>
+            <td>Reminder editing</td>
+            <td>Not available</td>
+            <td>Successfully edited</td>
+            <td>New feature</td>
+          </tr>
+          <tr>
+            <td>Deletion</td>
+            <td>Simple but preferred direct links</td>
+            <td>Confirmation messages</td>
+            <td>Improved flow</td>
+          </tr>
+          <tr>
+            <td>Custom subscription</td>
+            <td>Not available</td>
+            <td>Manual add (some confusion)</td>
+            <td>New feature</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="accessibility">Accessibility &amp; Inclusivity (WCAG 2.1)</h2>
+      <div class="callout ok">
+        <div class="ic material-icons-outlined">verified</div>
+        <div>
+          <h4>WCAG 2.1 AA &amp; AAA — All pass</h4>
+          <p>Contrast ratios verified with the WebAIM contrast checker against the Wasla palette: 19.41 (normal text on white), 11.56 (large text on purple), 15.42 (light tint on dark), 12.57 (orange on white). The minimum AA threshold is 4.5:1 — Wasla clears it by 3× to 4×.</p>
+        </div>
+      </div>
+      <ul>
+        <li><strong>Arabic &amp; English</strong> with native RTL / LTR layout.</li>
+        <li><strong>Dark / Light mode</strong> with high contrast verified.</li>
+        <li><strong>Font size</strong> customisation in 3 sizes: small / medium / large.</li>
+        <li><strong>Icon + text</strong> navigation everywhere — never icon-only.</li>
+        <li><strong>Screen reader</strong> support via Flutter Semantics.</li>
+        <li><strong>Touch targets</strong> ≥ 48dp as per Material guidelines.</li>
+      </ul>
+
+      <h2 id="comparison">Competitive Analysis</h2>
+      <p>BillBot, Subby and Bobby are the three most popular subscription managers. Wasla closes every meaningful gap.</p>
+      <table class="docs-table">
+        <thead>
+          <tr><th>Feature</th><th>BillBot</th><th>Subby</th><th>Bobby</th><th>Wasla</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Arabic language support</td><td>✗</td><td>✗</td><td>✗</td><td><strong>✓</strong></td></tr>
+          <tr><td>Smart offers</td><td>✗</td><td>✗</td><td>✗</td><td><strong>✓</strong></td></tr>
+          <tr><td>Cancellation guidance</td><td>✗</td><td>✗</td><td>Partial</td><td><strong>✓</strong></td></tr>
+          <tr><td>Spending analytics</td><td>Partial</td><td>✓</td><td>✓</td><td><strong>✓</strong></td></tr>
+          <tr><td>Personalized settings</td><td>✗</td><td>Partial</td><td>✗</td><td><strong>✓</strong></td></tr>
+          <tr><td>AI chatbot</td><td>✗</td><td>✗</td><td>✗</td><td><strong>✓</strong></td></tr>
+          <tr><td>Dark / Light mode</td><td>✗</td><td>✗</td><td>✗</td><td><strong>✓</strong></td></tr>
+          <tr><td>Font size</td><td>✗</td><td>✗</td><td>✗</td><td><strong>✓</strong></td></tr>
+          <tr><td>Multi-channel support</td><td>✗</td><td>✗</td><td>✗</td><td><strong>✓</strong></td></tr>
+          <tr><td>RTL interface</td><td>✗</td><td>✗</td><td>✗</td><td><strong>✓</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="roadmap">Roadmap</h2>
+      <table class="docs-table">
+        <thead>
+          <tr><th>Phase</th><th>Milestone</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Phase 1 (GP1)</td><td>Core subscription management (CRUD, dashboard, reminders)</td><td>✅ Completed</td></tr>
+          <tr><td>Phase 2 (GP2)</td><td>AI chatbot, smart offers, cancellation guide, custom subscriptions, reminder editing, improved UI</td><td>✅ Completed</td></tr>
+          <tr><td>Phase 3</td><td>Bank integration, auto-import subscriptions</td><td>🔮 Future</td></tr>
+          <tr><td>Phase 4</td><td>Advanced AI recommendations, spending predictions, subscription marketplace, social features (family sharing)</td><td>🔮 Future</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="team">Team</h2>
+      <p>Six students, one supervisor, one academic year.</p>
+      <table class="docs-table">
+        <thead>
+          <tr><th>Name</th><th>ID</th><th>Role</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ghadi Shaker Mutair Al-Fadhli</td><td>444000760</td><td>Team Lead / Frontend</td><td>ghadi2609@gmail.com</td></tr>
+          <tr><td>Kholoud Sultan Atiq Al-Otaibi</td><td>444005515</td><td>UI/UX Designer / Researcher</td><td>—</td></tr>
+          <tr><td>Elaf Ahmad Abdulsttar Almaymani</td><td>443008696</td><td>Backend Developer</td><td>—</td></tr>
+          <tr><td>Maryam Zainalabidin Fatani</td><td>444006766</td><td>Quality Assurance / Testing</td><td>—</td></tr>
+          <tr><td>Khadijah Ahmed Azab</td><td>444001406</td><td>Documentation / Content</td><td>—</td></tr>
+          <tr><td>Suha Abdulrahman Turkistani</td><td>444006390</td><td>AI / Chatbot Developer</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Supervisor:</strong> Dr. Reem Saleh Alashaikh ·
+        <strong>University:</strong> Umm Al-Qura University ·
+        <strong>College:</strong> Computing — Software Engineering — Human Computer Interaction.</p>
+
+      <h2 id="deploy">Deployment &amp; Local Setup</h2>
+      <p>The mobile app is built with Flutter. To run it locally from source:</p>
+      <div class="code-wrap">
+        <div class="code-head">
+          <span class="file">terminal</span>
+          <div class="actions"><button><span class="material-icons-outlined" style="font-size:14px;">content_copy</span>Copy</button></div>
+        </div>
+<pre><code><span class="code-comment"># 1. Environment setup</span>
+Download &amp; install the Flutter SDK 3.x and an IDE (VS Code or Android Studio).
+Configure a physical device via USB debugging, or launch an emulator.
+
+<span class="code-comment"># 2. Clone &amp; install</span>
+git clone &lt;repository-url&gt;
+cd wasla-app
+flutter pub get
+
+<span class="code-comment"># 3. Firebase configuration</span>
+<span class="code-comment"># Drop google-services.json into android/app/</span>
+<span class="code-comment"># Drop GoogleService-Info.plist into ios/Runner/</span>
+
+<span class="code-comment"># 4. Run</span>
+flutter run</code></pre>
+      </div>
+
+      <h3>Test credentials</h3>
+      <div class="docs-cols">
+        <div class="docs-col">
+          <h4>Demo account</h4>
+          <p>Email: <code>testuser@gmail.com</code><br/>Password: <code>123A321</code></p>
+        </div>
+        <div class="docs-col">
+          <h4>System requirements</h4>
+          <p>Android 8.0+ (2 GB RAM) · iOS 14.0+ (iPhone 11)<br/>Dev: Intel i5 / 8 GB RAM recommended</p>
+        </div>
+      </div>
+
+      <h3>Ethical design highlights</h3>
+      <div class="callout warn">
+        <div class="ic material-icons-outlined">policy</div>
+        <div>
+          <h4>Anti-dark-patterns</h4>
+          <p>Cancellation guidance is never hidden. The app explicitly warns that deleting a subscription from the app does not cancel it with the provider. No countdown timers, no manipulative ad placements.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <div class="ic material-icons-outlined">lock</div>
+        <div>
+          <h4>Data privacy</h4>
+          <p>2-step email verification on password reset, OAuth 2.0 for social sign-in, encrypted HTTPS in transit, Firestore security rules limiting reads to the document owner.</p>
+        </div>
+      </div>
+      <div class="callout gold">
+        <div class="ic material-icons-outlined">smart_toy</div>
+        <div>
+          <h4>AI bias risk</h4>
+          <p>The chatbot is deterministic retrieval over curated Arabic responses — no LLM, no hallucination, no bias propagation. The assistant is labeled "متصل الآن" (connected now) to avoid impersonating a human.</p>
+        </div>
+      </div>
+
+      <div class="callout ok" style="margin-top: 50px;">
+        <div class="ic material-icons-outlined">check_circle</div>
+        <div>
+          <h4>Conclusion</h4>
+          <p>Wasla offers a practical solution for managing subscriptions, helping users track
+          their subscriptions and avoid unwanted automatic renewals. The app addresses a real
+          pain point in the Saudi / GCC market where subscription management tools lack Arabic
+          support and localised features.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <button class="to-top" aria-label="Back to top"><span class="material-icons-outlined">arrow_upward</span></button>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/docs.js" defer></script>
+</body>
+</html>
