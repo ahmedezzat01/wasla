@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" width="240" height="220">
+  <defs>
+    <pattern id="diamond" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M30 5 L55 30 L30 55 L5 30 Z" fill="none" stroke="#9aa3a3" stroke-width="1.2" opacity="0.55"/>
+      <path d="M30 5 L55 30 L30 55 L5 30 Z" fill="#9aa3a3" opacity="0.18"/>
+    </pattern>
+    <pattern id="diamond-2" x="30" y="30" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M30 5 L55 30 L30 55 L5 30 Z" fill="none" stroke="#9aa3a3" stroke-width="1.2" opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="240" height="220" fill="url(#diamond)"/>
+  <rect x="0" y="0" width="240" height="220" fill="url(#diamond-2)"/>
+  <rect x="0" y="0" width="240" height="220" fill="white" opacity="0.55"/>
+</svg>
